@@ -95,6 +95,8 @@ Now, hange the goal within the same setting, and update the interaction with the
 
 **Show the follow-up work here.**
 
+After recording the setup for the first time, I realized that stability of the device is necessary to ensure that the device did not get destroyed by accident. Since the device is not necessary heavy, the connection between fridge and device should be strong. 
+
 ## Part E. Costume the device
 
 **Include sketches of what your devices might look like here.**
