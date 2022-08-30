@@ -71,7 +71,6 @@ The interactive device is designed for the usage in the kitchen. The interaction
 ## Part B. Act out the Interaction
 
 
-
 **Are there things that seemed better on paper than acted out?**
 * It is always possible that there is a delay when the light switches colors from green to red. 
 * The sound that plays may be either too loud or playing for too long.
@@ -87,24 +86,24 @@ It is a great tool, that works very well. However, it would be better if you cou
 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
+**Include your first attempts at recording the set-up video here.**
+
+https://user-images.githubusercontent.com/91849980/187335806-6dc8afea-0d20-4dd2-a0d1-9352dce675e6.mp4
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
-\*\***Show the follow-up work here.**\*\*
-
+**Show the follow-up work here.**
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
+**Include sketches of what your devices might look like here.**
 
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+![Lab-3](https://user-images.githubusercontent.com/91849980/187339356-5270c0a7-477f-49cd-8da2-f59c046c3510.jpg)
 
-\*\***Include sketches of what your devices might look like here.**\*\*
+**What concerns or opportunitities are influencing the way you've designed the device to look?**
 
-\*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+The main reason for designing the device on top of the fridge and not on the front is that when the fridge is open then the device would be attached to the door and would not be in the eyesight of the user. However, when designing the device on top of the fridge, we have to make sure that there is a certain elevation of the object to let the user see the color of the device better. In general, different shapes can be used to design the device but I would tend to the design that ensures the best stability on the fridge's surface. 
 
 
 ## Part F. Record
