@@ -142,6 +142,66 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity.
 
 
+## Part A. Plan 
+
+**Describe your setting, players, activity and goals here.**
+The interactive device is designed for the usage in the kitchen. The interaction starts when someone wants to cook. Anyone that uses the stove can be a Player. When you want to cook, then it is often the case that you forget the food because you were busy with other things. When the food gets burnt, then there is no alarm indicating that there might be a problem with the food. This device can be set up to a specific dish you want to cook and gives you visual, haptic as well as auditory feedback if you should go check the food. It can also be used as clock, where for specific dishes it tells you when to lower the heat. The goal of the player is to not waste time worrying about if the food burns, so that they can focus on assignments or guests for instance.  
+
+**Include pictures of your storyboards here.**
+
+![Lab-7](https://user-images.githubusercontent.com/91849980/188541115-b25f74aa-7661-41ce-af7c-99173881484f.jpg)
+![Lab-8](https://user-images.githubusercontent.com/91849980/188541184-144ba3c7-6894-4409-8744-947be19a792f.jpg)
+![Lab-9](https://user-images.githubusercontent.com/91849980/188541185-05be5df5-2708-4234-a702-bda4090c6b83.jpg)
+![Lab-10](https://user-images.githubusercontent.com/91849980/188541186-422159cb-0423-4f38-ad53-b106500169a4.jpg)
+![Lab-11](https://user-images.githubusercontent.com/91849980/188541187-6569781d-6750-4f3f-a760-c3ee013495eb.jpg)
+![Lab-12](https://user-images.githubusercontent.com/91849980/188541188-36c87d5c-0f17-4dd8-82bf-b811f1ed0a13.jpg)
+![Lab-13](https://user-images.githubusercontent.com/91849980/188541189-60eeb44d-c288-460a-9c53-8b4b7f00ff72.jpg)
+
+
+## Part B. Act out the Interaction
+
+
+**Are there things that seemed better on paper than acted out?**
+* It is very hard to attach the product to the bottom of the shelf and still be user-friendly
+* When the device is vibrating frequently, then the shelf might break
+
+**Are there new ideas that occur to you or your collaborators that come up from the acting?**
+* The device could adjust the heat of the stove automatically
+
+
+## Part C. Prototype the device
+
+**Give us feedback on Tinkerbelle.**
+It is a great tool, that works very well. However, it would be better if you could hide the two buttons on the mobile device in order to fully display the color. It would be also great if there would be a button that enables blinking of the UI.
+
+## Part D. Wizard the device
+
+**Include your first attempts at recording the set-up video here.**
+
+Now, hange the goal within the same setting, and update the interaction with the paper prototype.
+
+I narrowed the ideas down to 3. 
+
+The ideas include:
+
+
+**Show the follow-up work here.**
+![PXL_20220906_004349124](https://user-images.githubusercontent.com/91849980/188541283-c5d43009-4069-481e-99fb-0562f85dfa61.jpg)
+
+After recording the setup for the first time, I realized that stability of the device is necessary to ensure that the device did not get destroyed by accident. Since the device is not necessary heavy, the connection between fridge and device should be strong. 
+
+## Part E. Costume the device
+
+**Include sketches of what your devices might look like here.**
+
+![Lab-14](https://user-images.githubusercontent.com/91849980/188541234-3c9ac59e-dc81-4046-93a9-ea7c862263bc.jpg)
+
+**What concerns or opportunitities are influencing the way you've designed the device to look?**
+
+The main reason for designing the device on top of the fridge and not on the front is that when the fridge is open then the device would be attached to the door and would not be in the eyesight of the user. However, when designing the device on top of the fridge, we have to make sure that there is a certain elevation of the object to let the user see the color of the device better. In general, different shapes can be used to design the device but I would tend to the design that ensures the best stability on the fridge's surface. 
+
+
+
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
