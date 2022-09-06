@@ -139,6 +139,19 @@ You will be assigned three partners from another group. Go to their github pages
 Do last week’s assignment again, but this time: 
 1) It doesn’t have to (just) use light, 
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative! Feel free to fork and modify the tinkerbell code! 
-3) We will be grading with an emphasis on creativity. 
+3) We will be grading with an emphasis on creativity.
+
+
+## Part F. Record
+
+**Take a video of your prototyped interaction.**
+
+
+https://user-images.githubusercontent.com/91849980/188532159-3fb94a09-fbde-4923-82dc-a58780e70652.mov
+
+
+**Please indicate anyone you collaborated with on this Lab.**
+* Yunus Ansari
+* Keyur Shah 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
