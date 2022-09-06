@@ -180,15 +180,12 @@ It is a great tool, that works very well. However, it would be better if you cou
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype.
 
-I narrowed the ideas down to 3. 
-
-The ideas include:
-
+During the first attempts, I had problems fixing the device on the kitchen cabinet. Since the device includes a display with user interface and also electric components, it was a little bit heavy. Also, I had to figure out how to correctly design a cover for the device, where I used a scissor to cut it to match the device. 
 
 **Show the follow-up work here.**
 ![PXL_20220906_004349124](https://user-images.githubusercontent.com/91849980/188541283-c5d43009-4069-481e-99fb-0562f85dfa61.jpg)
 
-After recording the setup for the first time, I realized that stability of the device is necessary to ensure that the device did not get destroyed by accident. Since the device is not necessary heavy, the connection between fridge and device should be strong. 
+I realized that stability of the device is necessary to ensure that the device did not get destroyed by accident. Since the device is not necessary heavy, the connection between kitchen cabinet and device should be strong. 
 
 ## Part E. Costume the device
 
@@ -198,9 +195,7 @@ After recording the setup for the first time, I realized that stability of the d
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
-The main reason for designing the device on top of the fridge and not on the front is that when the fridge is open then the device would be attached to the door and would not be in the eyesight of the user. However, when designing the device on top of the fridge, we have to make sure that there is a certain elevation of the object to let the user see the color of the device better. In general, different shapes can be used to design the device but I would tend to the design that ensures the best stability on the fridge's surface. 
-
-
+The reason designing the device on the front of the kitchen cabinet instead of on the microwave is that when I attach the device to the microwave, there might be stability issues on the microwave's door. I also believe that it won't be very beneficial in terms of heat transfer which could destroy the device. It was also necessary to me that the device is in the eyesight of the user. It may occur that the user is not in the kitchen and is not watching the device, then the device gives in case of burning food auditory as well as haptic feedback to let the user know that they should check the food in the kitchen. I believe that using different senses to interact with a device is nowadays very important. 
 
 ## Part F. Record
 
@@ -214,4 +209,3 @@ https://user-images.githubusercontent.com/91849980/188532159-3fb94a09-fbde-4923-
 * Yunus Ansari
 * Keyur Shah 
 
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
