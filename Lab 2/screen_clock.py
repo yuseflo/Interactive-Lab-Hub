@@ -1,9 +1,11 @@
-import time
+from time import strftime, sleep
 import subprocess
 import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+from adafruit_rgb_display.rgb import color565
+import webcolors
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -59,13 +61,22 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
 
+#disp.fill(screenColor)
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    #disp.fill(screenColor)
+    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py
+    if buttonB.value and not buttonA.value:
+        #disp.fill(screenColor)
+        draw.text((x, 0), strftime("%H:%M:%S"), font = font, fill = "#FFFFFF")
+    if buttonA.value and not buttonB.value:
+        draw.text((x, 0), strftime("%H:%M:%S"), font = font, fill = "#FFFFFF")
+    
 
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    sleep(1)
