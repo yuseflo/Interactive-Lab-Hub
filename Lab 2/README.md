@@ -200,10 +200,20 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
+This PiClock demonstrates a competitive race between three different athletes. The athletes have 20 seconds to run as fast as possible. The athlete that reaches the highest distance wins. The game starts with a click on the upper button. 
+
 https://drive.google.com/file/d/1aKe1YBy9d3hDsfMelt_l8ozhX8IsnJuz/view?usp=sharing
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+
+To improve the game, when the countdown reaches 0, I could stop the countdown again and make each athlete stop running immediately. Also, the number of laps each athlete successfully completed is not shown, which can be done for future work. It would also be a great addition to display the winner of the race in the middle of the screen, so that viewers know if their favorite athlete has won. 
+
+![Sketch1](https://user-images.githubusercontent.com/91849980/189788659-956bac91-f9b8-47bd-a523-c9f9de5a0cc7.jpg)
+
+In idea 2, you can see that displaying milliseconds could increase the excitement of watching the run. It would also look more realistic if the players ran more smoothly, i.e. not taking large steps. Finally, idea 3 deals with the interactivity of the device is and suggests that the game could also be paused by the lower button and continued with the upper button. This means that the top button has two different functions, one is to start the game and the other is to resume the game after it has been interrupted with the lower button.
+
+![Sketch2](https://user-images.githubusercontent.com/91849980/189788676-f1510c2f-e140-461a-a819-07a3122ed5f0.jpg)
 
 
 # Prep for Part 2
