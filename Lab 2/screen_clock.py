@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from adafruit_rgb_display.rgb import color565
 import webcolors
+import random
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -58,6 +59,8 @@ x = 0
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
+font_big = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -75,53 +78,92 @@ x3 = 0
 t = 0
 
 # Declare value to indicate if button is pressed once or not
-button_press = False
+button_marathon = False
+
+button_seconds = False
 
 while True:
     
+    # Display menu
+    draw.rectangle((0, 0, width, height/2), outline=0, fill="#0000FF")
+    draw.rectangle((0, height, width, height/2), outline=0, fill="#FFFFFF")
+    draw.text((25,20), "Watch Marathon", font=font_big, fill="#FFFFFF")
+    draw.text((75,80), "Settings", font=font_big, fill="#000000")
+
     # Press button A
     if not buttonA.value:
-        button_press = True
+        button_marathon = True
     
-    if button_press:
+    if button_marathon:
         # Draw a black filled box to clear the image.
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        
+        # Draw menu to select countdown
+        draw.rectangle((0, 0, width, height/2), outline=0, fill="#0000FF")
+        draw.rectangle((0, height, width, height/2), outline=0, fill="#FFFFFF")
+        draw.text((75,20), "10 sec", font=font_big, fill="#FFFFFF")
+        draw.text((75,80), "20 sec", font=font_big, fill="#000000")
 
+        # Select 20 sec
+        if not buttonB.value:
+            button_seconds = True
+        
+        if button_seconds: 
+            
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-        world = "Olympics Running"
+            world = "Olympics Marathon"
 
-        # Define countdown
-        mins, secs = divmod(t, 20)
-        timer = '{0}'.format(secs)
-        t -= 1
+            # Define countdown
+            mins, secs = divmod(t, 20)
+            timer = '{:.2f}'.format(float(secs))
+            t -= 0.1
 
-        draw.text((0, 0), strftime("%a %d" ), font=font, fill="#F4E38E")
-        draw.text((75, 0), world, font=font, fill="#F4E38E")
-        draw.text((0, 110), "Countdown: {0} s".format(timer), font=font, fill="#FFFFF0")
+            # Draw countdown bar at the bottom of the screen
+            draw.text((0, 0), strftime("%a %d" ), font=font, fill="#F4E38E")
+            draw.text((75, 0), world, font=font_small, fill="#F4E38E")
+            draw.text((0, 110), "Countdown: {0} s".format(timer), font=font, fill="#FFFFF0")
 
-        # Define 3 players and their position
-        hash = "#"
-        draw.text((x1, 32), hash, font=font, fill="#0000FF")
-        ampersand = "&"
-        draw.text((x2, 55), dollar, font=font, fill="#00FF00")
-        dollar = "$"
-        draw.text((x3, 78), ampersand, font=font, fill="#FF0000")
+            # Define 3 players and their position
+            hash = "#"
+            draw.text((x1, 32), hash, font=font, fill="#0000FF")
+            ampersand = "$"
+            draw.text((x2, 55), ampersand, font=font, fill="#00FF00")
+            dollar = "&"
+            draw.text((x3, 78), dollar, font=font, fill="#FF0000")
 
-        x1 += 13.4
-        x2 += 16.8
-        x3 += 15.4
+            # Define random movement of the players
+            x1 += random.randrange(2, 7)
+            x2 += random.randrange(2, 7)
+            x3 += random.randrange(2, 7)
 
-        # Let players start again after they reach the border of the display
-        if x1 > 230:
-            x1 = 0
+            # Let players start again after they reach the border of the display
+            if x1 > 230:
+                x1 = 0
 
-        if x2 > 230:
-            x2 = 0
+            if x2 > 230:
+                x2 = 0
 
-        if x3 > 230:
-            x3 = 0 
+            if x3 > 230:
+                x3 = 0
+            
+            # Display winner when the countdown ends
+            if round(t, 1) <= -20.200:
+                draw.rectangle((0, 0, width, height), outline=0, fill=0)
+                draw.text((80,20), "Winner:", font=font_big, fill="#FFFFFF")
 
-        # Display image.
-        disp.image(image, rotation)
-        time.sleep(1)
+                if x1 > x2 and x3:
+                    draw.text((120,50), "#", font=font_big, fill="#0000FF")
+                elif x2 > x1 and x3:
+                    draw.text((120,50), "$", font=font_big, fill="#00FF00")
+                elif x3 > x1 and x2:
+                    draw.text((120,50), "&", font=font_big, fill="#FF0000")
+                
+                time.sleep(3)
+                
+        
+
+    # Display image.
+    disp.image(image, rotation)
+    time.sleep(0.1)
 
