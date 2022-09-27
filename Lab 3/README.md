@@ -1,5 +1,5 @@
 # Chatterboxes
-**NAMES OF COLLABORATORS HERE**
+Yusef Iskandar
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
 In this lab, we want you to design interaction with a speech-enabled device--something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1).  First, we want you first to storyboard what you imagine the conversational interaction to be like. Then, you will use wizarding techniques to elicit examples of what people might say, ask, or respond.  We then want you to use the examples collected from at least two other people to inform the redesign of the device.
@@ -58,13 +58,10 @@ You can also play audio files directly with `aplay filename`. Try typing `aplay 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
-
-
+I used the Google TTS engine to let the Pi greet me by my name. 
 
 https://user-images.githubusercontent.com/91849980/192334065-51fd76e2-74cf-416a-a100-bca325b6c5bc.MOV
 
-
-Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
 
 ### Speech to Text
 
@@ -87,6 +84,8 @@ Then try `./vosk_demo_mic.sh`
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
 
+For this part, it was difficult for the Pi to recognize numbers. However, I let the camera ask me how many pets I have. The corresponding video can be seen below:
+
 https://drive.google.com/file/d/17fuoPT9_ZYEyNcnZpSeEj1g6bew4J5KR/view?usp=sharing
 
 
@@ -108,6 +107,8 @@ pi@ixe00:~/Interactive-Lab-Hub/Lab 3 $ python server.py
 ```
 From a remote browser on the same network, check to make sure your webserver is working by going to `http://<YourPiIPAddress>:5000`. You should be able to see "Hello World" on the webpage.
 
+The hello world example worked for me and can be seen below:
+
 <img width="361" alt="Screen Shot 2022-09-26 at 12 49 54 PM" src="https://user-images.githubusercontent.com/91849980/192335176-12dd0e4d-0fe3-41c8-9dc2-cd245535a57c.png">
 
 
@@ -117,9 +118,20 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+I designed a smart surgery assistant that helps surgeons execute surgeries without the help of nurses. During a surgery, the doctor wears gloves and is often not able to use the computer to gather information about the patient and maybe also specific information about human organs. The smart device provides the doctor with the health record of the patient as well as with information about materials in the hospital. The device is also able to contact a nurse, in case the doctor needs some help.   
+
+![Lab-17](https://user-images.githubusercontent.com/91849980/192410833-35161c89-f981-4be0-bc61-a2a81c1258d6.jpg)
+![Lab-19](https://user-images.githubusercontent.com/91849980/192410866-cb16f3a2-1af4-4103-86f6-4b5138ca3e03.jpg)
+
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
+
+Since a doctor is during a surgery under time pressure, he probably needs information very fast and concise, which the smart device can definitely provide. In this case I was thinking of a heart surgery, where the doctor identifies during the surgery that another doctor already executed an operation on the patient's heart. To be aware what the previous doctor did, our technology called "Aida" will provide the surgeon with the requested information. In order to go one step beyond and replace a heart valve, the doctor needs material, where again Aida assists the doctor by giving him information about the availability of the requested heart valve.  
+
+![Lab-18](https://user-images.githubusercontent.com/91849980/192410841-bc2cfa18-5e2f-4f1b-8bb7-3eb4537fba90.jpg)
+
 
 ### Acting out the dialogue
 
@@ -127,13 +139,10 @@ Find a partner, and *without sharing the script with your partner* try out the d
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+One thing I did not consider was that the doctor said "Aida" and the actual command at the same time, which did not give Aida enough time to greet the doctor and then answer the doctor's question. In general, it seems technically difficult to implement the consideration of the trigger word and the actual command. Also, in the end when the doctor hovered over the sensor, there should be a visual or auditory signal that lets the doctor know, that the sensor received a signal.  
+
 https://drive.google.com/file/d/10EUUjv0IRVOnlmkGHxwBIJH486OmxNVn/view?usp=sharing
 
-
-### Wizarding with the Pi (optional)
-In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
-
-\*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
 
 # Lab 3 Part 2
 
