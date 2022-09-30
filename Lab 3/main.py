@@ -39,66 +39,57 @@ def speak(line):
     cmd = "./speak.sh \"{}\"".format(line)
     os.system(cmd)
 
-# main game loop
-#input("Hey Aida.")
-greeting = text2speech()
-time.sleep(2)
+# main loop
+call_aida = text2speech()
 speak("Hi Doctor, how can I help you?")
 
-#if health history, else patients occupation 
-#input("Tell me about the patients health history")
-first_input = text2speech()
-if first_input == "history":
-    speak("The patient went through one surgery in March 2020.\
-    During the surgery the second heart valve was replaced with an \
-    biological valve from a cow.")
+if call_aida == "Aida":
 
-    time.sleep(2)
-    second_input = text2speech()
+    first_input = text2speech()
+    if first_input == "history":
+        speak("The patient went through one surgery in March 2020.\
+        During the surgery the second heart valve was replaced with an \
+        biological valve from a cow.")
 
-    if second_input == "biological":
-        speak("The second floor of the hospital has two biological valves available.")
         time.sleep(2)
-        third_input = text2speech()
+        second_input = text2speech()
 
-        if (third_input == "nurse") or (third_input == "employee"):
-            speak("Confirm calling a nurse by hovering over the module next to the patients bed.")
+        if second_input == "biological":
+            speak("The second floor of the hospital has two biological valves available.")
             time.sleep(2)
-    
-    else:
-        print("Something went wrong!")
+            third_input = text2speech()
 
-
-elif first_input == "occupation":
-    speak("The patient works as a wholesaler and has already suffered two heart attacks.")
-
-    time.sleep(2)
-    second_b_input = text2speech()
-
-    if second_b_input == "heart valve":
-        speak("Yes, the second heart valve of the patient is artifical.")
-        time.sleep(2)
-        third_b_input = text2speech()
-
-        if (third_b_input == "artifical") or (third_b_input == "biological"):
-            speak("There are two artifical heart valves in the storage of the hospital.")
-            time.sleep(2)
-
-            fourth_b_input = text2speech()
-
-            if (fourth_b_input == "nurse") or (fourth_b_input == "employee"):
+            if (third_input == "nurse") or (third_input == "employee"):
                 speak("Confirm calling a nurse by hovering over the module next to the patients bed.")
                 time.sleep(2)
-    else:
-        print("Something went wrong!")
+        
+        else:
+            print("Something went wrong!")
 
 
-# input("Do we have any other biological heart valves available?")
-# speak("The second floor of the hospital has two biological \
-# valves available.")
-# input("Bring me someone who can provide me with those valves.")
-# speak("Confirm calling a nurse by hovering over the module \
-# next to the patients bed.")
+    elif first_input == "occupation":
+        speak("The patient works as a wholesaler and has already suffered two heart attacks.")
+
+        time.sleep(2)
+        second_b_input = text2speech()
+
+        if second_b_input == "heart valve":
+            speak("Yes, the second heart valve of the patient is artifical.")
+            time.sleep(2)
+            third_b_input = text2speech()
+
+            if (third_b_input == "artifical") or (third_b_input == "biological"):
+                speak("There are two artifical heart valves in the storage of the hospital.")
+                time.sleep(2)
+
+                fourth_b_input = text2speech()
+
+                if (fourth_b_input == "nurse") or (fourth_b_input == "employee"):
+                    speak("Confirm calling a nurse by hovering over the module next to the patients bed.")
+                    time.sleep(2)
+        else:
+            print("Something went wrong!")
+
 
 i2c = busio.I2C(board.SCL, board.SDA)
 sensor = adafruit_apds9960.apds9960.APDS9960(i2c)
