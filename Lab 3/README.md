@@ -184,11 +184,12 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The good thing about the system is its detection of the trigger word which was pretty accurate. Although there was some background noise in the first video, Aida was still able to interact with the user. The two videos demonstrate two different scenarios on how to interact with the system which worked pretty good. 
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+Unfortunately, when the users were interacting with the proximity sensor, they had to flex their knees and try to hover over the sensor multiple times considering different distances to the sensor. This can be fixed by changing the distance parameter of the sensor which will make the interaction with users way easier. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
