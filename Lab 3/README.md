@@ -148,24 +148,19 @@ https://drive.google.com/file/d/10EUUjv0IRVOnlmkGHxwBIJH486OmxNVn/view?usp=shari
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
-## Prep for Part 2
-
-1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
-2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
-3. Make a new storyboard, diagram and/or script based on these reflections.
-
-## Prototype your system
-
-The system should:
-* use the Raspberry Pi 
-* use one or more sensors
-* require participants to speak to it. 
-
 *Document how the system works*
 
 *Include videos or screencaptures of both the system and the controller.*
 
+The image below demonstrates the system and the controller. 
+
 ![setup](https://user-images.githubusercontent.com/91849980/193192022-bf088c34-1cff-496e-8195-ee98bd36ca95.jpg)
+
+![Lab-20](https://user-images.githubusercontent.com/91849980/193710360-862cf31d-abc9-46e2-b56a-ec090ac8a05f.jpg)
+![Lab-18](https://user-images.githubusercontent.com/91849980/193710358-543fb3c0-4271-4084-9909-2011eb59debe.jpg)
+![Lab-21](https://user-images.githubusercontent.com/91849980/193710361-3a197cbd-f6a4-43f1-9dd8-7f4a7f68aef1.jpg)
+![Lab-22](https://user-images.githubusercontent.com/91849980/193710362-fc87d5c0-9cf2-4d1f-a609-9d65d1148bde.jpg)
+![Lab-19](https://user-images.githubusercontent.com/91849980/193710359-51634c6f-5287-4ed7-a688-f303bddfd3cd.jpg)
 
 Videos
 
@@ -180,6 +175,16 @@ https://drive.google.com/file/d/1N4-d9oEZVs9SRWg8I-WRFClDzxkix1ke/view?usp=shari
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
+
+The 2 videos can be seen above.
+
+User Interaction 1:
+
+https://drive.google.com/file/d/1r7jzRDJr4C-6k_DcgnufoaPBXdchQ7GN/view?usp=sharing
+
+User Interaction 2:
+
+https://drive.google.com/file/d/1N4-d9oEZVs9SRWg8I-WRFClDzxkix1ke/view?usp=sharing
 
 Answer the following:
 
