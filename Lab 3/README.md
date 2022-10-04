@@ -185,18 +185,17 @@ Answer the following:
 
 ### What worked well about the system and what didn't?
 
-The good thing about the system is its detection of the trigger word which was pretty accurate. Although there was some background noise in the first video, Aida was still able to interact with the user. The two videos demonstrate two different scenarios on how to interact with the system which worked pretty good. 
+The good thing about the system is its detection of the trigger word which was pretty accurate. Although there was some background noise in the first video, Aida was still able to interact with the user. The two videos demonstrate two different scenarios on how to interact with the system which worked pretty good. Since Aida has multiple functionalities, the problem with the system was that it captures only a small number of scenarios of how the doctor interacts with the system. 
 
 ### What worked well about the controller and what didn't?
 
-Unfortunately, when the users were interacting with the proximity sensor, they had to flex their knees and try to hover over the sensor multiple times considering different distances to the sensor. This can be fixed by changing the distance parameter of the sensor which will make the interaction with users way easier. 
+The controller is important since the doctor may just brainstorm by himself on what he could do in the situation of a surgery. Confirming calling a nurse by using the controller adds more seriousness to his request. Unfortunately, when the users were interacting with the proximity sensor, they had to flex their knees and try to hover over the sensor multiple times considering different distances to the sensor. This can be fixed by changing the distance parameter of the sensor which will make the interaction with users way easier. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
+There are two main lessons I took away from the WoZ interactions. The first one deals with the quantity of information Aida gives the doctor after asking a question. During a surgery, the doctor needs information very quick which may be a problem with how fast Aida speaks and also with how much information Aida actually provides to answer a specific question. The second lesson is more related to the flexibility between the two scenarios I recorded. Unfortunately, combining both scenarios to make the system more autonomous is technically hard to implement. Therefore, the interactions should rather kept simple. 
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
-
+In general, I could have probably used a camera instead of the proximity sensor to call staff/nurse. By using a camera that automatically detects whether the doctor is raising his hand, the doctor does not need to come close to the controller which saves him time during the operation. It will also fulfill our requirement that the doctor does not need to touch anything because in an operation he wears gloves which should not accumulate bacteria. 
