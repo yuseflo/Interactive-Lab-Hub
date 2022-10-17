@@ -178,6 +178,13 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![Lab-25](https://user-images.githubusercontent.com/91849980/196100142-45c11470-ce53-4a6d-98c0-79598376cafa.jpg)
+![Lab-26](https://user-images.githubusercontent.com/91849980/196100144-fd721e7b-177c-46bc-a463-1346d79c8a20.jpg)
+![Lab-27](https://user-images.githubusercontent.com/91849980/196100145-427de9f6-e662-4d7e-a9b3-52eecf9ba26c.jpg)
+![Lab-28](https://user-images.githubusercontent.com/91849980/196100146-5db895b4-f415-4462-8799-e4c9fadc7101.jpg)
+![Lab-29](https://user-images.githubusercontent.com/91849980/196100147-1e55f6ae-4a5d-4936-bd6b-89ca4cad7305.jpg)
+
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
@@ -271,6 +278,15 @@ We encourage you to try using these controls, **while** paying particular attent
 
 ### Part F
 ### Record
+
+![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
+![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
+
+Final Video:
+
+https://drive.google.com/file/d/17dsbhkgzJ72URy0kMTxzzqXox9Gazhqs/view?usp=sharing
+
+
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
