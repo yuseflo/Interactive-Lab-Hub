@@ -208,13 +208,13 @@ Design 1:
 - How close should the trash be hold next to the trash can to trigger the lid to open? We need to test this by using different objects to throw away and identify if their is a optimal distance for the proximity sensor. 
 
 Design 2:
-- May it happen that the user accidentially raises his hand in near proximity to the trash can? Can a hand be distinguished from actual trash inside of the hand of the user?
+- May it happen that the user accidentially raises his hand in near proximity to the trash can? Can a hand be distinguished from actual trash inside of the hand of the user? To test this you should place the trash can close to the living room where the user hangs around most of the time. 
 
 Design 3:
-- Is it possible that natural gestures that involve raising the hand lead to a change of the TV channel?
+- Is it possible that natural gestures that involve raising the hand lead to a change of the TV channel? To test this you should sit in front of the TV for a full movie and see if the sensor makes false classifications. 
 
 Design 4:
-- Do the feet of the user disturb the sensor of measuring the distance between the couch and the TV?
+- Do the feet of the user disturb the sensor of measuring the distance between the couch and the TV? To test this you should sit in front of the TV for a full movie and see if the sensor makes false indications. 
 
 Design 5:
 - Does the device only work when it is pinned on the side where the user is standing when trying to open the oven door?
@@ -268,19 +268,19 @@ Think about how you want to present the information about what your sensor is se
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
 
 Design 1:
-- Does it cost the user more time to first hold the trash in front of the trash can before putting it into the opening?
+- Does it cost the user more time to first hold the trash in front of the trash can before putting it into the opening? Record the time of the whole process of throwing garbage into a trash can. 
 
 Design 2:
-- Does a cylindric shape of the trash can affect the sensor measurement?
+- Does a cylindric shape of the trash can affect the sensor measurement? Create a prototype with a cylindrical shape. 
 
 Design 3:
-- Can the sensor measurements be affected or the sensor be damaged when garbage on the sensor?
+- Can the sensor measurements be affected or the sensor be damaged when garbage on the sensor? Create a prototype where the sensor is placed on top of the trash can. 
 
 Design 4:
-- Since the wall is far away from the garbage, are there any disturbing factors that will negatively affect the sensor measurements?
+- Since the wall is far away from the garbage, are there any disturbing factors that will negatively affect the sensor measurements? Place trash can close to wall and pin sensor on the wall. 
 
 Design 5:
-- Is it annoying for the user to hold the trash always next to the trash can?
+- Is it annoying for the user to hold the trash always next to the trash can? Test the process with multiple users. 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
@@ -294,7 +294,7 @@ Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
-I decided to go with the touchless trash can using a proximity sensor and a servo motor to open the lid of the trash can. The idea is helping people to throw garbage into the trash can without making their hands dirty. Since many people wash their hands after touching the trash can, this device is responsible for decreasing your personal water usage. 
+I decided to go with the touchless trash can using a proximity sensor and a servo motor to open the lid of the trash can. The idea is helping people to throw garbage into the trash can without making their hands dirty. Since many people wash their hands after touching the trash can, this device is responsible for decreasing your personal water usage. As you can see from the images the servo motor is placed inside of the trash in the center. On the servo motor is a flag made of cardboard attached that is strong enough to actually open the lid of the trash can. The proximity sensor detects the distance to the garbage and when the garbage is roughly 10cm in front of the trash can then the opening is triggered. The interaction of the trash can with the user can be seen in the video in Part F. 
 
 ![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
 ![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
