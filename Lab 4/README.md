@@ -178,6 +178,23 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+For this Lab, I am going with the Light/Proximity/Gesture sensor.
+
+Design 1:
+This design shows a touchless trash can using a proximity sensor. The trash can detects whether its lid should be opened based on the distance of the trash to the trash can. This idea is useful for people who cook in the kitchen and do not want to get their hands dirty by opening the lid of the trash can. 
+
+Design 2:
+This idea solves the same problem as in Design 1. The key difference is that the gesture function of the sensor will be used in this situation, since the user has to make a gesture by moving their hand upwards to indicate that the trash can should be opened.
+
+Design 3:
+This design demonstrates a remote control for the TV based on gesture input from the user. The user can change the TV channel by making a gesture and raising his hand. This idea is useful for people who can not find their TV remote control or are just too lazy to use it.
+
+Design 4:
+This idea represents a device that detects the optimal distance between the couch and the TV. This solves the problem raised by physicians who complain that too many people sit too close to the TV when watching movies.
+
+Design 5:
+The last design reminds people to stay next to the oven door when checking their food. When the oven is on and the user gets very close to the oven and is right in front of it, the light changes from green to red to remind the user to stay to the side when using the oven door, as they would be exposed to a large heat wave.
+
 ![Lab-25](https://user-images.githubusercontent.com/91849980/196100142-45c11470-ce53-4a6d-98c0-79598376cafa.jpg)
 ![Lab-26](https://user-images.githubusercontent.com/91849980/196100144-fd721e7b-177c-46bc-a463-1346d79c8a20.jpg)
 ![Lab-27](https://user-images.githubusercontent.com/91849980/196100145-427de9f6-e662-4d7e-a9b3-52eecf9ba26c.jpg)
@@ -185,7 +202,7 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 ![Lab-29](https://user-images.githubusercontent.com/91849980/196100147-1e55f6ae-4a5d-4936-bd6b-89ca4cad7305.jpg)
 
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
@@ -230,7 +247,7 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
