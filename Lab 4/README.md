@@ -204,8 +204,24 @@ The last design reminds people to stay next to the oven door when checking their
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
 
+Design 1:
+- How close should the trash be hold next to the trash can to trigger the lid to open? We need to test this by using different objects to throw away and identify if their is a optimal distance for the proximity sensor. 
+
+Design 2:
+- May it happen that the user accidentially raises his hand in near proximity to the trash can? Can a hand be distinguished from actual trash inside of the hand of the user?
+
+Design 3:
+- Is it possible that natural gestures that involve raising the hand lead to a change of the TV channel?
+
+Design 4:
+- Do the feet of the user disturb the sensor of measuring the distance between the couch and the TV?
+
+Design 5:
+- Does the device only work when it is pinned on the side where the user is standing when trying to open the oven door?
+
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I picked design 1, since it makes sense to also use an actuator for this idea. 
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -247,16 +263,39 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![Lab-30](https://user-images.githubusercontent.com/91849980/196329702-7e645bc8-0025-4fa4-b95b-80c8a0d8a867.jpg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+
+Design 1:
+- Does it cost the user more time to first hold the trash in front of the trash can before putting it into the opening?
+
+Design 2:
+- Does a cylindric shape of the trash can affect the sensor measurement?
+
+Design 3:
+- Can the sensor measurements be affected or the sensor be damaged when garbage on the sensor?
+
+Design 4:
+- Since the wall is far away from the garbage, are there any disturbing factors that will negatively affect the sensor measurements?
+
+Design 5:
+- Is it annoying for the user to hold the trash always next to the trash can?
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I picked design 1, since I believe it is the most intuitive user behavior. 
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I am going with design 1 because then the user can hold the garbage in a distance of roughly 10cm in front of the trash can to trigger its opening. The other options either may lead to false sensor measurements due to a high proximity to the actual garbage or require the user to put more time into the whole process.  
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
+![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
 
 LAB PART 2
 
@@ -295,9 +334,6 @@ We encourage you to try using these controls, **while** paying particular attent
 
 ### Part F
 ### Record
-
-![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
-![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
 
 Final Video:
 
