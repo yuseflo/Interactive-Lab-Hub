@@ -294,16 +294,15 @@ Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+*Works like*
+
 I decided to go with the touchless trash can using a proximity sensor and a servo motor to open the lid of the trash can. The idea is helping people to throw garbage into the trash can without making their hands dirty. Since many people wash their hands after touching the trash can, this device is responsible for decreasing your personal water usage. As you can see from the images the servo motor is placed inside of the trash in the center. On the servo motor is a flag made of cardboard attached that is strong enough to actually open the lid of the trash can. The proximity sensor detects the distance to the garbage and when the garbage is roughly 10cm in front of the trash can then the opening is triggered. The interaction of the trash can with the user can be seen in the video in Part F. 
+
+*Looks like*
 
 ![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
 ![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
 
-LAB PART 2
-
-### Part 2
-
-Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
 
 ### Part E (Optional)
 ### Servo Control with Joystick
@@ -336,6 +335,8 @@ We encourage you to try using these controls, **while** paying particular attent
 
 ### Part F
 ### Record
+
+*Acts like*
 
 Final Video:
 
