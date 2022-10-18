@@ -148,41 +148,55 @@ https://drive.google.com/file/d/10EUUjv0IRVOnlmkGHxwBIJH486OmxNVn/view?usp=shari
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
-## Prep for Part 2
-
-1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
-2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
-3. Make a new storyboard, diagram and/or script based on these reflections.
-
-## Prototype your system
-
-The system should:
-* use the Raspberry Pi 
-* use one or more sensors
-* require participants to speak to it. 
-
 *Document how the system works*
 
 *Include videos or screencaptures of both the system and the controller.*
 
+For the second part of this Lab I kept working on my smart surgery assistant that helps surgeons execute surgeries without the help of nurses. The idea is that during a surgery the doctor wears gloves and is often not able to use the computer to gather information about the patient. The smart device provides the doctor with the health record of the patient as well as with information about materials in the hospital. The device is also able to contact a nurse, in case the doctor needs some help. To confirm calling a nurse we use a proximity sensor. The doctor only has to hover over the controller to confirm that "Aida" is calling a nurse.
+
+In the following I created two different storyboards where two different scenarios are displayed. Both scenarios are tested with two different users in the two different videos that can be seen in the end of the Lab.  
+
+![Lab-20](https://user-images.githubusercontent.com/91849980/193710360-862cf31d-abc9-46e2-b56a-ec090ac8a05f.jpg)
+![Lab-18](https://user-images.githubusercontent.com/91849980/193710358-543fb3c0-4271-4084-9909-2011eb59debe.jpg)
+![Lab-21](https://user-images.githubusercontent.com/91849980/193710361-3a197cbd-f6a4-43f1-9dd8-7f4a7f68aef1.jpg)
+![Lab-22](https://user-images.githubusercontent.com/91849980/193710362-fc87d5c0-9cf2-4d1f-a609-9d65d1148bde.jpg)
+![Lab-19](https://user-images.githubusercontent.com/91849980/193710359-51634c6f-5287-4ed7-a688-f303bddfd3cd.jpg)
+
+The image below demonstrates the system and the controller. 
+
+![setup](https://user-images.githubusercontent.com/91849980/193711037-6f6ba183-60dd-4692-a972-e4171a5720f5.jpg)
+
+*Videos*
+
+User Interaction 1:
+
+https://drive.google.com/file/d/1r7jzRDJr4C-6k_DcgnufoaPBXdchQ7GN/view?usp=sharing
+
+User Interaction 2:
+
+https://drive.google.com/file/d/1N4-d9oEZVs9SRWg8I-WRFClDzxkix1ke/view?usp=sharing
+
+
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
+
+The 2 videos can be seen above.
 
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The good thing about the system is its detection of the trigger word which was pretty accurate. Although there was some background noise in the first video, Aida was still able to interact with the user. The two videos demonstrate two different scenarios on how to interact with the system which worked pretty good. Since Aida has multiple functionalities, the problem with the system was that it captures only a small number of scenarios of how the doctor interacts with the system. 
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+The controller is important since the doctor may just brainstorm by himself on what he could do in the situation of a surgery. Confirming calling a nurse by using the controller adds more seriousness to his request. Unfortunately, when the users were interacting with the proximity sensor, they had to flex their knees and try to hover over the sensor multiple times considering different distances to the sensor. This can be fixed by changing the distance parameter of the sensor which will make the interaction with users way easier. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
+There are two main lessons I took away from the WoZ interactions. The first one deals with the quantity of information Aida gives the doctor after asking a question. During a surgery, the doctor needs information very quick which may be a problem with how fast Aida speaks and also with how much information Aida actually provides to answer a specific question. The second lesson is more related to the flexibility between the two scenarios I recorded. Unfortunately, combining both scenarios to make the system more autonomous is technically hard to implement. Therefore, the interactions should rather kept simple. 
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
-
+In general, I could have probably used a camera instead of the proximity sensor to call staff/nurse. By using a camera that automatically detects whether the doctor is raising his hand, the doctor does not need to come close to the controller which saves him time during the operation. It will also fulfill our requirement that the doctor does not need to touch anything because in an operation he wears gloves which should not accumulate bacteria. 

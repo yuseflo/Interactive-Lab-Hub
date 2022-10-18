@@ -178,10 +178,50 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+For this Lab, I am going with the Light/Proximity/Gesture sensor.
+
+Design 1:
+This design shows a touchless trash can using a proximity sensor. The trash can detects whether its lid should be opened based on the distance of the trash to the trash can. This idea is useful for people who cook in the kitchen and do not want to get their hands dirty by opening the lid of the trash can. 
+
+Design 2:
+This idea solves the same problem as in Design 1. The key difference is that the gesture function of the sensor will be used in this situation, since the user has to make a gesture by moving their hand upwards to indicate that the trash can should be opened.
+
+Design 3:
+This design demonstrates a remote control for the TV based on gesture input from the user. The user can change the TV channel by making a gesture and raising his hand. This idea is useful for people who can not find their TV remote control or are just too lazy to use it.
+
+Design 4:
+This idea represents a device that detects the optimal distance between the couch and the TV. This solves the problem raised by physicians who complain that too many people sit too close to the TV when watching movies.
+
+Design 5:
+The last design reminds people to stay next to the oven door when checking their food. When the oven is on and the user gets very close to the oven and is right in front of it, the light changes from green to red to remind the user to stay to the side when using the oven door, as they would be exposed to a large heat wave.
+
+![Lab-25](https://user-images.githubusercontent.com/91849980/196100142-45c11470-ce53-4a6d-98c0-79598376cafa.jpg)
+![Lab-26](https://user-images.githubusercontent.com/91849980/196100144-fd721e7b-177c-46bc-a463-1346d79c8a20.jpg)
+![Lab-27](https://user-images.githubusercontent.com/91849980/196100145-427de9f6-e662-4d7e-a9b3-52eecf9ba26c.jpg)
+![Lab-28](https://user-images.githubusercontent.com/91849980/196100146-5db895b4-f415-4462-8799-e4c9fadc7101.jpg)
+![Lab-29](https://user-images.githubusercontent.com/91849980/196100147-1e55f6ae-4a5d-4936-bd6b-89ca4cad7305.jpg)
+
+
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+
+Design 1:
+- How close should the trash be hold next to the trash can to trigger the lid to open? We need to test this by using different objects to throw away and identify if their is a optimal distance for the proximity sensor. 
+
+Design 2:
+- May it happen that the user accidentially raises his hand in near proximity to the trash can? Can a hand be distinguished from actual trash inside of the hand of the user? To test this you should place the trash can close to the living room where the user hangs around most of the time. 
+
+Design 3:
+- Is it possible that natural gestures that involve raising the hand lead to a change of the TV channel? To test this you should sit in front of the TV for a full movie and see if the sensor makes false classifications. 
+
+Design 4:
+- Do the feet of the user disturb the sensor of measuring the distance between the couch and the TV? To test this you should sit in front of the TV for a full movie and see if the sensor makes false indications. 
+
+Design 5:
+- Does the device only work when it is pinned on the side where the user is standing when trying to open the oven door?
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I picked design 1, since it makes sense to also use an actuator for this idea. 
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -223,22 +263,46 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+![Lab-30](https://user-images.githubusercontent.com/91849980/196329702-7e645bc8-0025-4fa4-b95b-80c8a0d8a867.jpg)
+
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+
+Design 1:
+- Does it cost the user more time to first hold the trash in front of the trash can before putting it into the opening? Record the time of the whole process of throwing garbage into a trash can. 
+
+Design 2:
+- Does a cylindric shape of the trash can affect the sensor measurement? Create a prototype with a cylindrical shape. 
+
+Design 3:
+- Can the sensor measurements be affected or the sensor be damaged when garbage on the sensor? Create a prototype where the sensor is placed on top of the trash can. 
+
+Design 4:
+- Since the wall is far away from the garbage, are there any disturbing factors that will negatively affect the sensor measurements? Place trash can close to wall and pin sensor on the wall. 
+
+Design 5:
+- Is it annoying for the user to hold the trash always next to the trash can? Test the process with multiple users. 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I picked design 1, since I believe it is the most intuitive user behavior. 
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I am going with design 1 because then the user can hold the garbage in a distance of roughly 10cm in front of the trash can to trigger its opening. The other options either may lead to false sensor measurements due to a high proximity to the actual garbage or require the user to put more time into the whole process.  
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+#### Works like
 
-LAB PART 2
+I decided to go with the touchless trash can using a proximity sensor and a servo motor to open the lid of the trash can. The idea is helping people to throw garbage into the trash can without making their hands dirty. Since many people wash their hands after touching the trash can, this device is responsible for decreasing your personal water usage. As you can see from the images the servo motor is placed inside of the trash in the center. On the servo motor is a flag made of cardboard attached that is strong enough to actually open the lid of the trash can. The proximity sensor detects the distance to the garbage and when the garbage is roughly 10cm in front of the trash can then the opening is triggered. The interaction of the trash can with the user can be seen in the video in Part F. 
 
-### Part 2
+#### Looks like
 
-Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
+![motor](https://user-images.githubusercontent.com/91849980/196100297-83937fda-d646-4679-9b05-f2b45ac7acd9.jpg)
+![trash_can](https://user-images.githubusercontent.com/91849980/196100332-89a5c814-5130-4efb-a4c4-521571f3a994.jpg)
+
 
 ### Part E (Optional)
 ### Servo Control with Joystick
@@ -271,6 +335,14 @@ We encourage you to try using these controls, **while** paying particular attent
 
 ### Part F
 ### Record
+
+#### Acts like
+
+Final Video:
+
+https://drive.google.com/file/d/17dsbhkgzJ72URy0kMTxzzqXox9Gazhqs/view?usp=sharing
+
+
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
