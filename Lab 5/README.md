@@ -234,6 +234,15 @@ This might take a while to get fully installed. After installation, connect your
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
+Waterlevel Detection 
+
+<img width="500" alt="Screen Shot 2022-10-25 at 10 16 02 AM" src="https://user-images.githubusercontent.com/91849980/197886212-a4958ef1-ae69-4103-ba7c-f0ca22340e85.png">
+
+<img width="500" alt="Screen Shot 2022-10-25 at 10 17 53 AM" src="https://user-images.githubusercontent.com/91849980/197886229-6a02da44-d0c9-4dc1-a00d-d571520023cf.png">
+
+<img width="500" alt="Screen Shot 2022-10-25 at 11 14 58 AM" src="https://user-images.githubusercontent.com/91849980/197886249-6a799009-ea0e-41f7-b6ce-48639f1ea95d.png">
+
+<img width="500" alt="Screen Shot 2022-10-25 at 11 24 30 AM" src="https://user-images.githubusercontent.com/91849980/197886256-ab476672-8d3f-4cd9-962f-89f9e6cf9870.png">
 
 ### Part B
 ### Construct a simple interaction.
