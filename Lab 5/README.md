@@ -254,6 +254,8 @@ Waterlevel Detection
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+In restaurants waiters are coming to the tables of the customers frequently to check if they have to refill their water glasses. Based on how often the waiter comes to refill the water, customers are making decisions on how well the service in the restaurant is. To provide a good customer service, many waiters are coming too often to the customer's table and tend to annoy them by refilling only 20ish% of the water glass. That's why for this idea a camera is placed in the restaurant that detects the water level of the customers and based on that sends a message to the waiter to fill the water glasses of specific tabels. The interaction would be having a person sitting at a table with a glass in front of them and then it detects between 4 different water levels.  
+
 ### Part C
 ### Test the interaction prototype
 
