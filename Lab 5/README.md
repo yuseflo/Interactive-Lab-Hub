@@ -312,6 +312,11 @@ The following video shows how the model classifies the tea level correctly with 
 
 https://drive.google.com/file/d/1iqMDxnbE2GV-nS7GNWYu6aAQ4fWY9Do-/view?usp=share_link
 
+For the final video, I used the tea level detection model since it was significantly more accurate than the water level model. For the interaction we have the customer of the restaurant as well as the waiter who refills the glass of the customer. In the final video below you can see how all three classes work pretty accurately when the waiter is serving tea. 
+
+https://drive.google.com/file/d/1veC0hOP18U0gss__j2m0fAA5TY5vksun/view?usp=share_link
+
+
 
 
 
