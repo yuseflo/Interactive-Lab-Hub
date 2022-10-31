@@ -256,6 +256,9 @@ Waterlevel Detection
 
 In restaurants waiters are coming to the tables of the customers frequently to check if they have to refill their water glasses. Based on how often the waiter comes to refill the water, customers are making decisions on how well the service in the restaurant is. To provide a good customer service, many waiters are coming too often to the customer's table and tend to annoy them by refilling only 20ish% of the water glass. That's why for this idea a camera is placed in the restaurant that detects the water level of the customers and based on that sends a message to the waiter to fill the water glasses of specific tabels. The interaction would be having a person sitting at a table with a glass in front of them and then it detects between 4 different water levels.  
 
+![Image-1](https://user-images.githubusercontent.com/91849980/198917747-0e6d2be0-e5fc-44af-8b9f-ae75944a1e66.jpg)
+
+
 ### Part C
 ### Test the interaction prototype
 
@@ -266,11 +269,15 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+The device works when it detects a glass of water clearly without any disturbing factor in the image. The glass must be completely visible in the image without any cutouts. The detection fails when in the picture are objects that are not used for training the model. Different lighting conditions and distances to the camera can also falsify the detection. 
+
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+The user is not really aware of the uncertainties in the system. When there exists a misclassification then the waiter will come and will see that the glass of water is not empty which is why he then goes back to the bar which might disturb the customer. It would be better to use a drink that is easier to detect like juice since it is not transparent. In this case, the training and creation of the model has to be done with the juice as training data. 
 
 ### Part D
 ### Characterize your own Observant system
@@ -286,6 +293,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+You can use the device in restaurants to detect whether the customer needs to refill or remove his drink or not. A good environment is a table with a glass and a person sitting in front of it. It would be bad if the image is crowded and multiple people appear. Additionally, it wouldn’t be helpful if the glass is not fully visible. The device won’t work since it is a camera that sends messages to the waiter’s system. 
 
 ### Part 2.
 
