@@ -102,19 +102,27 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
-Contours Detection
+**Contour Detection**
+
+The contour detection algorithm worked for me and displays the boundaries between my face and my hair as well as between my glasses and my face pretty good. This algorithm can be used for classifying different car models.  For example, an A-class Mercedes is a smaller, rounder car, while a G-class Mercedes is larger and has sharper edges. 
 
 <img width="500" alt="Screen Shot 2022-10-20 at 9 19 53 AM" src="https://user-images.githubusercontent.com/91849980/197404469-5794e136-8783-4f4f-9bb3-cc7466b7e65a.png">
 
-Face Detection
+**Face Detection**
+
+The face detection algorithm was able to detect my face and my eyes very accurate although I was wearing glasses. An example of this algorithm could be the detection of criminals robbing a bank. 
 
 <img width="500" alt="Screen Shot 2022-10-20 at 9 21 24 AM" src="https://user-images.githubusercontent.com/91849980/197404470-56df9a80-567a-40a4-b493-7fb401a9110d.png">
 
-Flow Detection
+**Optical Flow Detection**
+
+The optical flow algorithm worked for me and showed when I moved my head how the edges of my glasses were moving. An example could be the observation of traffic flow in urban cities. It is possible to track the speed and direction of movement of multiple vehicles to monitor the behavior of road users. 
 
 <img width="500" alt="Screen Shot 2022-10-20 at 9 22 21 AM" src="https://user-images.githubusercontent.com/91849980/197404471-bf841708-f583-44e8-9d11-05ca15048e03.png">
 
-Object Detection
+**Object Detection**
+
+The object detection algorithm was able to draw a box around me. An example of this would be determining the number of spectators in the stadium at a sporting event. 
 
 <img width="500" alt="Screen Shot 2022-10-20 at 9 23 32 AM" src="https://user-images.githubusercontent.com/91849980/197404473-832a3123-eb49-4d6b-b344-21c7b01117da.png">
 
@@ -313,6 +321,8 @@ The following video shows how the model classifies the tea level correctly with 
 https://drive.google.com/file/d/1iqMDxnbE2GV-nS7GNWYu6aAQ4fWY9Do-/view?usp=share_link
 
 For the final video, I used the tea level detection model since it was significantly more accurate than the water level model. For the interaction we have the customer of the restaurant as well as the waiter who refills the glass of the customer. In the final video below you can see how all three classes work pretty accurately when the waiter is serving tea. 
+
+**Final Video**
 
 https://drive.google.com/file/d/1veC0hOP18U0gss__j2m0fAA5TY5vksun/view?usp=share_link
 
