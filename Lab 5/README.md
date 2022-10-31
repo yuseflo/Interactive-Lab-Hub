@@ -301,3 +301,17 @@ You can use the device in restaurants to detect whether the customer needs to re
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+Since there were several classification issues because water is transparent, I tried doing the experiment with red tea. In this case, I am using different classes, namely: Full, Half, and empty which describe the tea level of the glass. 
+
+In the following you can see an image of the classes and the training data which shows that it classifies the tea level correct for me since I am the person who is used for training the model. 
+
+<img width="500" alt="Screen Shot 2022-10-30 at 11 01 57 PM" src="https://user-images.githubusercontent.com/91849980/198923556-541f224a-e6d3-460f-ba8f-a4c1c89206b6.png">
+
+The following video shows how the model classifies the tea level correctly with another person:
+
+https://drive.google.com/file/d/1iqMDxnbE2GV-nS7GNWYu6aAQ4fWY9Do-/view?usp=share_link
+
+
+
+
