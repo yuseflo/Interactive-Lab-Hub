@@ -273,7 +273,9 @@ This might take a while to get fully installed. After installation, connect your
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
-Waterlevel Detection 
+**Waterlevel Detection**
+
+I was able to run teachable machines and used it for 4 different classes of a waterlevel detector. The images can be seen below. Unfortunately, the detection was not very accurate, so the last class was not even 100% detected. The problem with this idea is that water is transparent and the model had difficulty classifying it correctly. So I changed the idea by using tea and introducing 3 different classes, which can be seen in part 2.
 
 <img width="500" alt="Screen Shot 2022-10-25 at 10 16 02 AM" src="https://user-images.githubusercontent.com/91849980/197886212-a4958ef1-ae69-4103-ba7c-f0ca22340e85.png">
 
