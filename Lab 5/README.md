@@ -153,6 +153,8 @@ Using the microphone, try one of the following:
 
 Since I was having issues with pushing the example file, you can see the code snippets used for this assignment below. 
 
+I have set a threshold for the loudest frequency in the room to 500. And said that when this threshold is exceeded, the room is no longer quiet. 
+
 ```
 #Part1
 if LoudestFrequency > 500:
@@ -160,6 +162,8 @@ if LoudestFrequency > 500:
 ```
 
 **2. Set up a running averaging** Can you set up a running average over one of the variables that are being calculated.[moving average](https://en.wikipedia.org/wiki/Moving_average)
+
+The moving average is calculated as the division between the sum of the volumes and the number of volume points. 
 
 ```
 #Part2
@@ -170,6 +174,8 @@ if len(VolumeHistory) != 0:
 
 **3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
 
+In the figure below, you can see that I was able to detect a peak of a signal. This was done by looking for a volume point that has a higher volume than the point before and after it. The peak is identified after looking at the last point where the signal goes down, which is why the print statement says that the point above is a peak. 
+
 ```
 #Part3
 if len(VolumeHistory) > 2:
@@ -178,7 +184,6 @@ if len(VolumeHistory) > 2:
 ```
 
 <img width="500" alt="Screen Shot 2022-10-31 at 1 14 00 AM" src="https://user-images.githubusercontent.com/91849980/198936398-119cbcad-1801-4370-9175-e3dfeba2d29c.png">
-
 
 
 For technical references:
