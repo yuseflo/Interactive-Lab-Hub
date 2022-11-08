@@ -96,6 +96,26 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+**Idea 1: Home camera system**
+
+For the first idea, I thought of a home system that has a camera at the front door that can detect which person is waiting at the door. After recognizing the face (which is done by training a model), the message can be retrieved by the system in the living room of the house. The speaker in the living room announces "Trevor is waiting for you." Both systems work with different networks.
+
+**Idea 2: Alarm system for stores**
+
+The second idea is an alarm system for stores, where an alarm message is sent to the store owner's mobile device based on movements inside the store.
+
+**Idea 3: Live dart game tracker**
+
+The third idea is a live dart game tracker that uses computer vision to detect how many points a dart player is throwing and sends that information in real time to people who want to be informed live but can't be there. 
+
+**Idea 4: Plant monitoring system**
+
+The fourth idea is a plant monitoring system that shows you the condition of the plants in the garden in real time, no matter where you are. Sensory components would be light, temperature and humidity. 
+
+**Idea 5: Knee prostheses**
+
+The fifth idea is to use a knee brace with an accelerometer attached. The data collected by the accelerometer can be used in research laboratories to better understand the movement of the knee and develop suitable prostheses. In this case the data would be sent directly to the researcher in the lab. 
+
 ### Part C
 ### Streaming a Sensor
 
@@ -117,8 +137,15 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
+![IMG_38FA70F00219-1](https://user-images.githubusercontent.com/91849980/200447086-a78286be-66ce-46d7-94e5-a2f23350ec1f.jpeg)
+
+https://drive.google.com/file/d/1qtqt2qmNGZPZD6lJZTuHL-AMlXqKi-KV/view?usp=share_link
+
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
+![accelerometer](https://user-images.githubusercontent.com/91849980/200447198-ee102a85-5b73-4c13-8146-e8c11200be04.jpg)
+
+https://drive.google.com/file/d/1vt5g7cVB95hnJITM-ty3tv_bhfnlWGvS/view?usp=share_link
 
 ### Part D
 ### The One True ColorNet
@@ -157,13 +184,19 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 Find at least one class (more are okay) partner, and design a distributed application together based on the exercise we asked you to do in this lab.
 
+![image](https://user-images.githubusercontent.com/91849980/200447706-b56cb8e6-feb2-4f6c-973f-8c7af97aa930.png)
+
+
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
+![part_E_architecture](https://user-images.githubusercontent.com/91849980/200447335-518d5538-f9ed-484a-b99a-388fb465efa4.png)
+
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
+
+https://www.youtube.com/watch?v=PYb4LYRVsRk
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
-<!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
-
+https://www.youtube.com/watch?v=EVtC1CCwqPg
