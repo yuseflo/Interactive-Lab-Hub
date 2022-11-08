@@ -96,6 +96,21 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+**Idea 1: Home camera system**
+For the first idea, I thought of a home system that has a camera at the front door that can detect which person is waiting at the door. After recognizing the face (which is done by training a model), the message can be retrieved by the system in the living room of the house. The speaker in the living room announces "Trevor is waiting for you." Both systems work with different networks.
+
+**Idea 2: Alarm system for stores**
+The second idea is an alarm system for stores, where an alarm message is sent to the store owner's mobile device based on movements inside the store.
+
+**Idea 3: Live dart game tracker**
+The third idea is a live dart game tracker that uses computer vision to detect how many points a dart player is throwing and sends that information in real time to people who want to be informed live but can't be there. 
+
+**Idea 4: Plant monitoring system**
+The fourth idea is a plant monitoring system that shows you the condition of the plants in the garden in real time, no matter where you are. Sensory components would be light, temperature and humidity. 
+
+**Idea 5: Knee prostheses**
+The fifth idea is to use a knee brace with an accelerometer attached. The data collected by the accelerometer can be used in research laboratories to better understand the movement of the knee and develop suitable prostheses. In this case the data would be sent directly to the researcher in the lab. 
+
 ### Part C
 ### Streaming a Sensor
 
