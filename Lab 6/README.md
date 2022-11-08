@@ -137,11 +137,15 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
+I saw on the MQTT window the sensor streaming of the capacitive sensor which indicated which specific Twizzler was touched. You can find an image of the setup as well as a short video of the sensor streaming of the capacitive sensor below. 
+
 ![IMG_38FA70F00219-1](https://user-images.githubusercontent.com/91849980/200447086-a78286be-66ce-46d7-94e5-a2f23350ec1f.jpeg)
 
 https://drive.google.com/file/d/1qtqt2qmNGZPZD6lJZTuHL-AMlXqKi-KV/view?usp=share_link
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+
+I used the accelerometer for the second data streaming. You can find an image of the setup as well as a short video of the sensor streaming of the accelerometer below. The code can be seen in the repo. 
 
 ![accelerometer](https://user-images.githubusercontent.com/91849980/200447198-ee102a85-5b73-4c13-8146-e8c11200be04.jpg)
 
@@ -178,6 +182,7 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
+I used the given color script to read the colors and display them on the raspberry pi screen. Since this was an interesting example, I used the same sensor which can also measure light for Part E of this lab.  
 
 ### Part E
 ### Make it your own
@@ -186,17 +191,25 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 ![image](https://user-images.githubusercontent.com/91849980/200447706-b56cb8e6-feb2-4f6c-973f-8c7af97aa930.png)
 
-
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
+
+For this part I worked together with my partner Rahul. We took his first idea which is a factory that has sensors distributed all around and is sending messages to a central monitoring office which is checking for anomalies. We can monitor various things like the noise level in the factory and the light level (since these are the sensors that we possess). If we had other sensors, we could monitor for things like temperature level, air quality, boxes falling, reversing forklifts (distance sensor), # people in an area, etc. Using MQTT is useful for this because streaming this type of data across a large area or multiple buildings makes it easy for a central authority to see everything in a dashboard like manner and respond accordingly.
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
+The following figure shows the architecture of the system. The inputs are the various factory stations that are doing the monitoring by sending messages back to a central station that reviews the status of all the stations and does any computations to determine if there are anomalies. Then the central monitoring station decides if it needs to send people / resources out to the stations or perhaps just send a message back to the station. For the message being sent back to the station, it will be outputted on the screen and also a verbal message will play over the loudspeaker.
+
 ![part_E_architecture](https://user-images.githubusercontent.com/91849980/200447335-518d5538-f9ed-484a-b99a-388fb465efa4.png)
 
+
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
+
+For this part we created a behind-the-scenes video which can be seen below. The final code for the central monitoring system as well as the final code for the factory is can be found in the repo.
 
 https://www.youtube.com/watch?v=PYb4LYRVsRk
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
+The final interaction video can be seen below. 
 
 https://www.youtube.com/watch?v=EVtC1CCwqPg
