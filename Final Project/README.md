@@ -159,9 +159,10 @@ Unfortunately, this was not the best approach which is the reason why we had to 
 
 Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
 
+
 ### Microphone Integration
 
-
+The unique feature of our Pacman game is that based on the volume of the environment the speed of the game changes. This means that for a silent player it will be easier to avoid enemies. To detect the volume we are integrating a USB microphone into the raspberry pi. We started by using the same code we used in class for the microphone. The issue was that Pacman was moving very slowly, it took him approximately 1-2 seconds to move to another pixel. To make the existing code faster we significantly increased the "frames per buffer", changed the "Update Interval" to zero, and removed irrelevant code related to frequencies and other things. Those changes increased the speed of Pacman moving significantly and made a smooth interaction possible.
 
 
 ### Game Logic
