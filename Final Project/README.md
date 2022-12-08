@@ -1,6 +1,6 @@
 # Final Project: Matrix Gaming Console
 
-**NAMES OF COLLABORATORS HERE** Rahul Jain, Yusef Iskandar
+Rahul Jain, Yusef Iskandar
 
 ## Project Plan
 
@@ -97,7 +97,11 @@ The storyboard for Pacman is below. From the project plan we modified the idea t
 
 ### Physical Hardware Development
 
+
 Below are some images from connecting the physical components, wiring, soldering, and casing design.
+
+After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel is able to display moving shapes fast enough. Since we want to use a accelerometer/gyroscope to detect the tilt of the matrix panel, we had to solder four pins on the back of the matrix bonnet. It was very challenging to solder those four pins which are directly next to each other very accurately. However, we were fortunate enough to get help from Supermakers in the MakerLab which were more experienced in soldering than us. 
+We also used a USB microphone which was easily plugged into one of the raspberry pi's USB slots.
 
 <img src="imgs/hardware_wiring2.png" alt="Hardware" width=400/>
 
@@ -106,6 +110,8 @@ Below are some images from connecting the physical components, wiring, soldering
 <img src="imgs/hardware_soldering_bonnet.png" alt="Hardware" width=400/>
 
 Cardboard / Acryllic case design [file](./imgs/final_box_design.ai):
+
+As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters on https://www.festi.info/boxes.py/. We used the Universal Box with parallel finger joint holes. After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. We found out some issues with the design that were related to the number of finger joints per face, with the dimensions of the holes, and with the actual dimensions of the box to ensure minimal play. After adjusting the design to address those issues, we used the laser cutter of the makerlab again to cut the final acryllic case that can be seen in the images below.  
 
 <img src="imgs/hardware_cardboard_casing.png" alt="Hardware" width=400/>
 
