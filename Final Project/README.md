@@ -151,15 +151,36 @@ Since we started working on this project we both agreed that we want to make the
 
 ### Maze
 
-Parsing a simple maze file and displaying it. Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
+As a next step we had to create a maze based on the available pixel size of the matrix panel. The matrix panel is 64x32, however column 63 and 64 were reserved for displaying the player's remaining lives as well as their score. This means our maze should be size 62x32. Unfortunately, we didn't find any maze that has this specific size and we also didn't find any good maze generator on the web. Our first approach was taking a maze that has a different size and display it on the matrix panel and see afterwards if we can scale it until it fits perfectly. An image of this board [1](pacman_board_1.txt) can be seen below. 
 
 <img src="imgs/software_dev_testing_maze_display.png" alt="Software" width=400/>
+
+Unfortunately, this was not the best approach which is the reason why we had to manually design a maze starting with 62x32 walls and continuously remove the walls to make a pathway for pacman. This approach resulted in [2](pacman_board_2.txt). For the two boards described previously, we assumed that Pacman is able to get food at every dot he can step on. Another approach we pursued was placing food at every other dot. Our assumption was this would make the board easier to understand after looking at it. However, we ended up rejecting this approach since it became too crowded and made it even harder to understand for the user. 
+
+Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
 
 
 ### Game Logic
 
 
+
+
+
+### Speaker Integration 
+
+
+
 ### List of software errors
+
+* Pacman walking through the ghost
+* When you play the game and lose then game restarts and shows both homescreen and the game board
+* Ghost can't use the tunnel
+* When ghosts turned into enemies, the one that Pacman ate spawned outside the map
+* Gyroscope produces MathDomainError when pitch is equal to 90 or -90 degrees
+* Ghost doesn't go to jail after its eaten
+* Issues with BFS algorithm
+* Pacman eats ghost near wall, Pacman pixel is colored in a wall and ghost does not go in jail
+* After loosing one life, when eating power pellet nothing happens, no ghost mode
 
 
 
