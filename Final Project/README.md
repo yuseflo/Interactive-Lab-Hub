@@ -159,20 +159,31 @@ Unfortunately, this was not the best approach which is the reason why we had to 
 
 Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
 
+### Microphone Integration
+
+
+
 
 ### Game Logic
 
 For the game we tried to be as close to the real Pacman game as possible. Every player has 3 lives and can accumulate points by eating food whereas you can get 10 points for food and 50 points for power pellets. After eating a power pellet the game turns into the ghost mode which enables Pacman to eat ghosts. For each ghost eaten you can get 200 points. The game has four enemies which start at four different corners of the game. Although there are four enemies we have to distinguish between scatter and chase mode. When the enemies are in scatter mode they are not actively chasing Pacman but are focusing on a specific dot on the matrix panel and will move in loops around this point. In this game we have set those positions as the four corners of the maze which means that the four enemies will go in loops around each corner of the maze when they are in scatter mode. To make the gamer harder we also have a chase mode. As previously mentioned every enemy starts in scatter mode but after a pre-defined time the first enemy turns into chase mode, then the second until in the end all enemies are in chase mode. In chase mode the enemy actively chases the position of Pacman. To find an appropriate algorithm we found an article that uses Breath First Search (BFS) which would be the best solution for this situation. The best next solution would be optimizing by minimal distance (also Manhattan distance). However, we were not able to run the BFS algorithm successfully, the code can be seen in our main file, we assume that it takes too much time to compute the best next step when using BFS. This is why we wended up using the minimum distance algorithm which does its work suprisingly really good.
 
-
+Helpful resources we used for the game logic:
+https://gameinternals.com/understanding-pac-man-ghost-behavior
+https://github.com/TechnoVisual/Pygame-Zero
+https://pygame-zero.readthedocs.io/en/stable/#
+https://github.com/szczys/matrixman
 
 
 ### Speaker Integration 
 
+As a last step of the whole final project we integrated a speaker into the system to play common Pacman sound effects. We downloaded and used the intro music, the eating food, the eating power pellet, the eating ghost and the death sound effect from https://www.classicgaming.cc/classics/pac-man/sounds.
+In general, we had lots of issues using the microphone and the speaker simultaneously on the raspberry pi which made it not feasible to use the speaker we were using in class. Therefore we are using a bluetooth speaker from JBL. Even though we were using a bluetooth speaker it was not easy to make it work with libraries like VLC, Pygame etc. Finally we were successful using the library BlueAlsa and the instructions in the following link (https://introt.github.io/docs/raspberrypi/bluealsa.html). 
+
 
 ### User tests
 
-
+VIDEOS!!!
 
 ### List of software errors
 
@@ -186,7 +197,7 @@ For the game we tried to be as close to the real Pacman game as possible. Every 
 * Pacman eats ghost near wall, Pacman pixel is colored in a wall and ghost does not go in jail
 * After loosing one life, when eating power pellet nothing happens, no ghost mode
 
-
+## Code Structure
 
 The main code for the project is located in [pacman.py](pacman.py) which has dependencies in [pacman_sensors.py](pacman_sensors.py), [sample_base.py](samplebase.py) and a few other library files.
 
