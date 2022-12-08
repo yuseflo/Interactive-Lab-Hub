@@ -95,47 +95,73 @@ The storyboard for Pacman is below. From the project plan we modified the idea t
 
 <img src="imgs/storyboard_pacman.png" alt="Storyboard Pacman"/>
 
-### Physical Hardware Development
-
-
 Below are some images from connecting the physical components, wiring, soldering, and casing design.
 
-After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel is able to display moving shapes fast enough. Since we want to use a accelerometer/gyroscope to detect the tilt of the matrix panel, we had to solder four pins on the back of the matrix bonnet. It was very challenging to solder those four pins which are directly next to each other very accurately. However, we were fortunate enough to get help from Supermakers in the MakerLab which were more experienced in soldering than us. 
-We also used a USB microphone which was easily plugged into one of the raspberry pi's USB slots.
+## Physical Hardware Development
 
-<img src="imgs/hardware_wiring2.png" alt="Hardware" width=400/>
+### Sensor Integration
+
+After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel is able to display moving shapes fast enough. 
 
 <img src="imgs/hardware_wiring.png" alt="Hardware" width=400/>
 
+Since we want to use an accelerometer/gyroscope to detect the tilt of the matrix panel, we had to solder four pins on the back of the matrix bonnet. It was very challenging to solder those four pins which are directly next to each other very accurately. However, we were fortunate enough to get help from Supermakers in the MakerLab which were more experienced in soldering than us.
+
 <img src="imgs/hardware_soldering_bonnet.png" alt="Hardware" width=400/>
 
-Cardboard / Acryllic case design [file](./imgs/final_box_design.ai):
+We also used a USB microphone which was easily plugged into one of the raspberry pi's USB slots. The raspberry pi and all other sensors as well as the speaker were all put into the back of the acryllic case. The image below shows all the back of the case including raspberry pi, matrix bonnet, matrix panel, microphone and accelerometer/gyroscope (speaker missing in this image). 
 
-As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters on https://www.festi.info/boxes.py/. We used the Universal Box with parallel finger joint holes. After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. We found out some issues with the design that were related to the number of finger joints per face, with the dimensions of the holes, and with the actual dimensions of the box to ensure minimal play. After adjusting the design to address those issues, we used the laser cutter of the makerlab again to cut the final acryllic case that can be seen in the images below.  
+<img src="imgs/hardware_wiring2.png" alt="Hardware" width=400/>
+
+
+### Acryllic case design
+
+As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters on https://www.festi.info/boxes.py/. We used the Universal Box with parallel finger joint holes. The final box design can be seen in the following [file](./imgs/final_box_design.ai). After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. 
 
 <img src="imgs/hardware_cardboard_casing.png" alt="Hardware" width=400/>
 
+We found out some issues with the design that were related to the number of finger joints per face, with the dimensions of the holes, and with the actual dimensions of the box to ensure minimal play. After adjusting the design to address those issues, we used the laser cutter of the makerlab again to cut the final acryllic case that can be seen in the image below.  
+
 <img src="imgs/hardware_casing.png" alt="Hardware" width=400/>
 
-### Software Development
+## Software Development
 
 Below are some images from inital testing of the matrix panel.
 
-Creating and displaying an intuitive homescreen:
+### Gyroscope Calibration
+
+In the beginning of our software development phase we worked on the calibration of the gyroscope/accelerometer. The two important angles that are important for the usage of our matrix panel are "pitch" and "roll". For the calculation of those angles we used the equations that can be found below and are derived from https://ozzmaker.com/compass2/. 
+
+<img width="1000" alt="Screenshot 2022-12-07 at 10 18 49 PM" src="https://user-images.githubusercontent.com/91849980/206347725-820da3c6-cc0e-41bb-83d9-54488ce084a0.png">
+
+To test the functionality of the matrix panel, we taped a gyroscope to a box and ran a script using the equations described above. 
+
+<img src="imgs/software_testing_gyroscope.png" alt="Software" width=400/>
+
+After we found out that the gyroscope was working and has been suprisingly responsive, we proceeded and wrote some simple scripts to move a dot on the matrix panel by rotating the gyroscope. Here is a behind-the-scenes video for some testing of the gyroscope readings and the progression towards moving the Pacman around the board.
+
+[![Final Project Gyro Behind the Scenes](https://img.youtube.com/vi/jXzmlWeQkb0/0.jpg)](https://www.youtube.com/watch?v=jXzmlWeQkb0)
+
+### Homescreen
+
+Since we started working on this project we both agreed that we want to make the final product very intuitive to use as well as showcase it in Open Studio. Therefore, we decided to design a homescreen which can be seen when the potential user's see our matrix panel and want to go ahead and play. The homescreen consists of game instructions on the left hand side. It tells you that you have to the tilt the matrix panel in the vertical and horizontal direction. It also explains that the user has 3 lives before the game is over. On the right hand side of the homescreen, the user can see a small calibration board where the user can get used to moving pacman by tilting the board before actually starting the game. To start the game, the user has to eat the four white dots that can be seen in the blue box at the left bottom of the home screen. You can see our final home screen in the image below. 
 
 <img src="imgs/software_homescreen.png" alt="Software" width=400/>
+
+
+### Maze
 
 Parsing a simple maze file and displaying it. Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
 
 <img src="imgs/software_dev_testing_maze_display.png" alt="Software" width=400/>
 
-Taping a gyroscope to a box to test its functionality individually:
 
-<img src="imgs/software_testing_gyroscope.png" alt="Software" width=400/>
+### Game Logic
 
-Here is a behind-the-scenes video for some testing of the gyroscope readings and the progression towards moving the Pacman around the board.
 
-[![Final Project Gyro Behind the Scenes](https://img.youtube.com/vi/jXzmlWeQkb0/0.jpg)](https://www.youtube.com/watch?v=jXzmlWeQkb0)
+### List of software errors
+
+
 
 The main code for the project is located in [pacman.py](pacman.py) which has dependencies in [pacman_sensors.py](pacman_sensors.py), [sample_base.py](samplebase.py) and a few other library files.
 
