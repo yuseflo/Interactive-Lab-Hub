@@ -95,21 +95,20 @@ The storyboard for Pacman is below. From the project plan we modified the idea t
 
 <img src="imgs/storyboard_pacman.png" alt="Storyboard Pacman"/>
 
-Below are some images from connecting the physical components, wiring, soldering, and casing design.
 
 ## Physical Hardware Development
 
 ### Sensor Integration
 
-After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel is able to display moving shapes fast enough. 
+After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel was capable of displaying moving shapes fast enough. 
 
 <img src="imgs/hardware_wiring.png" alt="Hardware" width=400/>
 
-Since we want to use an accelerometer/gyroscope to detect the tilt of the matrix panel, we had to solder four pins on the back of the matrix bonnet. It was very challenging to solder those four pins which are directly next to each other very accurately. However, we were fortunate enough to get help from Supermakers in the MakerLab which were more experienced in soldering than us.
+Since we want to use an accelerometer/gyroscope to sense the tilt of the matrix panel, we had to solder four pins to the back of the matrix hood. It was very difficult to solder these four pins, which are right next to each other, accurately. However, we were fortunate to get help from the supermakers at MakerLab who had more soldering experience than we did.
 
 <img src="imgs/hardware_soldering_bonnet.png" alt="Hardware" width=400/>
 
-We also used a USB microphone which was easily plugged into one of the raspberry pi's USB slots. The raspberry pi and all other sensors as well as the speaker were all put into the back of the acryllic case. The image below shows all the back of the case including raspberry pi, matrix bonnet, matrix panel, microphone and accelerometer/gyroscope (speaker missing in this image). 
+We also used a USB microphone that was simply plugged into one of the raspberry pi's USB slots. The raspberry pi and all other sensors as well as the speaker were placed on the back of the acryllic case. The image below shows the entire back of the case including raspberry pi, matrix bonnet, matrix panel, microphone and accelerometer/gyroscope (the speaker is missing from this image). 
 
 <img src="imgs/hardware_wiring2.png" alt="Hardware" width=400/>
 
@@ -120,17 +119,16 @@ As a next step we designed the accryllic case for the matrix panel. We generated
 
 <img src="imgs/hardware_cardboard_casing.png" alt="Hardware" width=400/>
 
-We found out some issues with the design that were related to the number of finger joints per face, with the dimensions of the holes, and with the actual dimensions of the box to ensure minimal play. After adjusting the design to address those issues, we used the laser cutter of the makerlab again to cut the final acryllic case that can be seen in the image below.  
+We found some issues with the design related to the number of finger joints per side, the dimensions of the holes, and the actual dimensions of the case to ensure minimal play. After adjusting the design to fix these issues, we again used the makerlab's laser cutter to cut the final acrylic case, which can be seen in the picture below.  
 
 <img src="imgs/hardware_casing.png" alt="Hardware" width=400/>
 
-## Software Development
 
-Below are some images from inital testing of the matrix panel.
+## Software Development
 
 ### Gyroscope Calibration
 
-In the beginning of our software development phase we worked on the calibration of the gyroscope/accelerometer. The two important angles that are important for the usage of our matrix panel are "pitch" and "roll". For the calculation of those angles we used the equations that can be found below and are derived from https://ozzmaker.com/compass2/. 
+At the beginning of our software development phase, we worked on the calibration of the gyroscope/accelerometer. The two important angles to use with our matrix panel are "pitch" and "roll". To calculate these angles, we used the equations found below, which are derived from https://ozzmaker.com/compass2/. 
 
 <img width="1000" alt="Screenshot 2022-12-07 at 10 18 49 PM" src="https://user-images.githubusercontent.com/91849980/206347725-820da3c6-cc0e-41bb-83d9-54488ce084a0.png">
 
@@ -138,36 +136,37 @@ To test the functionality of the matrix panel, we taped a gyroscope to a box and
 
 <img src="imgs/software_testing_gyroscope.png" alt="Software" width=400/>
 
-After we found out that the gyroscope was working and has been suprisingly responsive, we proceeded and wrote some simple scripts to move a dot on the matrix panel by rotating the gyroscope. Here is a behind-the-scenes video for some testing of the gyroscope readings and the progression towards moving the Pacman around the board.
+After we found that the gyroscope worked and responded surprisingly well, we wrote some simple scripts to move a point on the matrix board by rotating the gyroscope. Here's a behind-the-scenes video showing some tests of the gyroscope readings and the progression of the Pacman's movement on the board.
 
 [![Final Project Gyro Behind the Scenes](https://img.youtube.com/vi/jXzmlWeQkb0/0.jpg)](https://www.youtube.com/watch?v=jXzmlWeQkb0)
 
 ### Homescreen
 
-Since we started working on this project we both agreed that we want to make the final product very intuitive to use as well as showcase it in Open Studio. Therefore, we decided to design a homescreen which can be seen when the potential user's see our matrix panel and want to go ahead and play. The homescreen consists of game instructions on the left hand side. It tells you that you have to the tilt the matrix panel in the vertical and horizontal direction. It also explains that the user has 3 lives before the game is over. On the right hand side of the homescreen, the user can see a small calibration board where the user can get used to moving pacman by tilting the board before actually starting the game. To start the game, the user has to eat the four white dots that can be seen in the blue box at the left bottom of the home screen. You can see our final home screen in the image below. 
+Since we started working on this project, we agreed that we wanted the final product to be very intuitive to use and present in Open Studio. Therefore, we decided to design a home screen that will be displayed when the potential user sees our matrix panel and wants to start the game. The homescreen consists of a game tutorial on the left side. There, it is explained that you need to tilt the Matrix panel in the vertical and horizontal directions. It is also explained that the user has 3 lives before the game is over. On the right side of the homescreen, the user sees a small calibration board where he can get used to Pacman's movement by tilting the board before starting the game. To start the game, the user must eat the four white dots that can be seen in the blue box at the bottom right of the home screen. You can see the final start screen in the image below. 
 
 <img src="imgs/software_homescreen.png" alt="Software" width=400/>
 
 
 ### Maze
 
-As a next step we had to create a maze based on the available pixel size of the matrix panel. The matrix panel is 64x32, however column 63 and 64 were reserved for displaying the player's remaining lives as well as their score. This means our maze should be size 62x32. Unfortunately, we didn't find any maze that has this specific size and we also didn't find any good maze generator on the web. Our first approach was taking a maze that has a different size and display it on the matrix panel and see afterwards if we can scale it until it fits perfectly. An image of this board [1](pacman_board_1.txt) can be seen below. 
+The next step was to create a maze based on the available pixel size of the matrix panel. The matrix panel is 64x32, but columns 63 and 64 were reserved for displaying the player's remaining lives and his score. This means that our maze should be 62x32 in size. Unfortunately, we didn't find a maze that was that size, and we didn't find a good maze generator on the Internet. Our first approach was to take a maze that was a different size, display it on the matrix board, and then see if we could scale it until it fit perfectly. An image of this board [1](pacman_board_1.txt) can be seen below. 
 
 <img src="imgs/software_dev_testing_maze_display.png" alt="Software" width=400/>
 
-Unfortunately, this was not the best approach which is the reason why we had to manually design a maze starting with 62x32 walls and continuously remove the walls to make a pathway for pacman. This approach resulted in [2](pacman_board_2.txt). For the two boards described previously, we assumed that Pacman is able to get food at every dot he can step on. Another approach we pursued was placing food at every other dot. Our assumption was this would make the board easier to understand after looking at it. However, we ended up rejecting this approach since it became too crowded and made it even harder to understand for the user. 
+Unfortunately, this was not the best approach, so we had to manually design a maze with 62x32 walls and continuously remove the walls to create a path for Pacman. This approach resulted in [2](pacman_board_2.txt). For the two boards described earlier, we assumed that Pacman gets food at every point he can step on. Another approach we took was to place food at every other pixel. We assumed that this would make the board easier to understand after viewing. However, we discarded this approach because it was too cluttered and made it even harder for the user to understand the game. 
 
 Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
 
 
 ### Microphone Integration
 
-The unique feature of our Pacman game is that based on the volume of the environment the speed of the game changes. This means that for a silent player it will be easier to avoid enemies. To detect the volume we are integrating a USB microphone into the raspberry pi. We started by using the same code we used in class for the microphone. The issue was that Pacman was moving very slowly, it took him approximately 1-2 seconds to move to another pixel. To make the existing code faster we significantly increased the "frames per buffer", changed the "Update Interval" to zero, and removed irrelevant code related to frequencies and other things. Those changes increased the speed of Pacman moving significantly and made a smooth interaction possible.
+The unique feature of our Pacman game is that the speed of the game changes depending on the volume of the environment. This means that it is easier for a silent player to avoid enemies. To detect the volume, we integrated a USB microphone into the raspberry pi. We started with the same code we used in class for the microphone. The problem was that Pacman moved very slowly, taking about 1-2 seconds to move to another pixel. To make the existing code faster, we significantly increased the "frames per buffer", set the "update interval" to zero, and removed irrelevant code related to frequencies and other things. These changes have significantly increased the speed at which Pacman moves and enabled smooth interaction.
 
 
 ### Game Logic
 
-For the game we tried to be as close to the real Pacman game as possible. Every player has 3 lives and can accumulate points by eating food whereas you can get 10 points for food and 50 points for power pellets. After eating a power pellet the game turns into the ghost mode which enables Pacman to eat ghosts. For each ghost eaten you can get 200 points. The game has four enemies which start at four different corners of the game. Although there are four enemies we have to distinguish between scatter and chase mode. When the enemies are in scatter mode they are not actively chasing Pacman but are focusing on a specific dot on the matrix panel and will move in loops around this point. In this game we have set those positions as the four corners of the maze which means that the four enemies will go in loops around each corner of the maze when they are in scatter mode. To make the gamer harder we also have a chase mode. As previously mentioned every enemy starts in scatter mode but after a pre-defined time the first enemy turns into chase mode, then the second until in the end all enemies are in chase mode. In chase mode the enemy actively chases the position of Pacman. To find an appropriate algorithm we found an article that uses Breath First Search (BFS) which would be the best solution for this situation. The best next solution would be optimizing by minimal distance (also Manhattan distance). However, we were not able to run the BFS algorithm successfully, the code can be seen in our main file, we assume that it takes too much time to compute the best next step when using BFS. This is why we wended up using the minimum distance algorithm which does its work suprisingly really good.
+
+In the game we tried to get as close as possible to the real Pacman game. Each player has 3 lives and can earn points by eating food, where you can get 10 points for food and 50 points for power pellets. After eating a power pellet, the game switches to ghost mode, where Pacman can eat ghosts. For each ghost eaten, you get 200 points. The game has four enemies that start at four different corners of the board. Although there are four enemies, you have to distinguish between the scatter and chase modes. In scatter mode, the enemies do not actively chase Pacman, but focus on a specific point on the matrix panel and move in loops around that point. In this game, we have set these positions as the four corners of the maze, which means that the four enemies will run in loops around each corner of the maze when in chase mode. To make it harder for the player, we also have a chase mode. As mentioned earlier, each enemy starts in scatter mode, but after a certain amount of time the first enemy switches to chase mode, then the second, until in the end all enemies are in chase mode. In chase mode, the enemy is actively chasing Pacman's position. Looking for a suitable algorithm, we found an article that uses Breath First Search (BFS), which would be the best solution for this situation. The best next solution would be to optimize by minimum distance (also Manhattan distance). However, we were not able to successfully run the BFS algorithm, the code can be seen in our main file, we suspect that calculating the best next step when using BFS takes too much time. Therefore we decided to use the minimum distance algorithm, which does its job amazingly well.
 
 Helpful resources we used for the game logic:
 https://gameinternals.com/understanding-pac-man-ghost-behavior
@@ -179,7 +178,7 @@ https://github.com/szczys/matrixman
 ### Speaker Integration 
 
 As a last step of the whole final project we integrated a speaker into the system to play common Pacman sound effects. We downloaded and used the intro music, the eating food, the eating power pellet, the eating ghost and the death sound effect from https://www.classicgaming.cc/classics/pac-man/sounds.
-In general, we had lots of issues using the microphone and the speaker simultaneously on the raspberry pi which made it not feasible to use the speaker we were using in class. Therefore we are using a bluetooth speaker from JBL. Even though we were using a bluetooth speaker it was not easy to make it work with libraries like VLC, Pygame etc. Finally we were successful using the library BlueAlsa and the instructions in the following link (https://introt.github.io/docs/raspberrypi/bluealsa.html). 
+In general, we had a lot of problems with using the microphone and speaker on the raspberry pi at the same time, which made it impossible to use the speaker we used in class. Therefore, we used a bluetooth speaker from JBL. Although we used a bluetooth speaker, it was not easy to make it work with libraries like VLC, Pygame, etc. Finally, with the help of the BlueAlsa library and the instructions at the following link, we managed to do it (https://introt.github.io/docs/raspberrypi/bluealsa.html). 
 
 
 ### User tests
