@@ -162,11 +162,15 @@ Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.
 
 ### Game Logic
 
+For the game we tried to be as close to the real Pacman game as possible. Every player has 3 lives and can accumulate points by eating food whereas you can get 10 points for food and 50 points for power pellets. After eating a power pellet the game turns into the ghost mode which enables Pacman to eat ghosts. For each ghost eaten you can get 200 points. The game has four enemies which start at four different corners of the game. Although there are four enemies we have to distinguish between scatter and chase mode. When the enemies are in scatter mode they are not actively chasing Pacman but are focusing on a specific dot on the matrix panel and will move in loops around this point. In this game we have set those positions as the four corners of the maze which means that the four enemies will go in loops around each corner of the maze when they are in scatter mode. To make the gamer harder we also have a chase mode. As previously mentioned every enemy starts in scatter mode but after a pre-defined time the first enemy turns into chase mode, then the second until in the end all enemies are in chase mode. In chase mode the enemy actively chases the position of Pacman. To find an appropriate algorithm we found an article that uses Breath First Search (BFS) which would be the best solution for this situation. The best next solution would be optimizing by minimal distance (also Manhattan distance). However, we were not able to run the BFS algorithm successfully, the code can be seen in our main file, we assume that it takes too much time to compute the best next step when using BFS. This is why we wended up using the minimum distance algorithm which does its work suprisingly really good.
 
 
 
 
 ### Speaker Integration 
+
+
+### User tests
 
 
 
