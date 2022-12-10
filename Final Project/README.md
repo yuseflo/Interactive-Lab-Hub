@@ -11,25 +11,25 @@ Rahul Jain, Yusef Iskandar
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="video">Demo</a></li>
-        <li><a href="description">Description</a></li>
-        <li><a href="builtwith">Built with</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#built-with">Built with</a></li>
         <ul>
-          <li><a href="HardwareDevelopment">Hardware Development</a></li>
+          <li><a href="#hardware-development">Hardware Development</a></li>
           <ul>
-            <li><a href="SensorIntegration">Sensor Integration</a></li>
-            <li><a href="Acrylliccasedesign">Acryllic Case Design</a></li>
+            <li><a href="#sensor-integration">Sensor Integration</a></li>
+            <li><a href="#acryllic-case-design">Acryllic Case Design</a></li>
           </ul>
-          <li><a href="SoftwareDevelopment">Software Development</a></li>
+          <li><a href="#software-development">Software Development</a></li>
           <ul>
-            <li><a href="GyroscopeCalibration">Gyroscope Calibration</a></li>
-            <li><a href="Homescreen">Homescreen</a></li>
-            <li><a href="Maze">Maze</a></li>
-            <li><a href="MicrophoneIntegration">Microphone Integration</a></li>
-            <li><a href="GameLogic">Game Logic</a></li>
-            <li><a href="SpeakerIntegration">Speaker Integration</a></li>
+            <li><a href="#gyroscope-calibration">Gyroscope Calibration</a></li>
+            <li><a href="#homescreen">Homescreen</a></li>
+            <li><a href="#maze">Maze</a></li>
+            <li><a href="#microphone-integration">Microphone Integration</a></li>
+            <li><a href="#game-logic">Game Logic</a></li>
+            <li><a href="#speaker-integration">Speaker Integration</a></li>
           </ul>
-          <li><a href="HardwareParts">Hardware Parts</a></li>
+          <li><a href="#hardware-parts">Hardware Parts</a></li>
         </ul>
       </ul>
     </li>
@@ -54,11 +54,12 @@ Rahul Jain, Yusef Iskandar
 <!-- ABOUT THE PROJECT -->
 # About The Project
 
+<!-- DEMO -->
 ## Demo
 
 Add video!!!
 
-
+<!-- DESCRIPTION -->
 ## Description
 
 Our project is a handheld matrix gaming console in which we have developed the game of Pacman from scratch. By tilting the board, the user can control the position of Pacman and eat food or ghosts to accumulate points. There's a catch though! The louder the environment the user is playing in, the more difficult the game. So put your skills to the test and play a game of Pacman!
@@ -67,14 +68,15 @@ Our project is a handheld matrix gaming console in which we have developed the g
 ![matrixpanel](https://user-images.githubusercontent.com/91849980/206876986-2ae6665f-149d-402f-b5a5-04b79b627357.png)
 
 
-
+<!-- BUILT WITH -->
 ## Built With
 
 In the following section, we are explaining our entire process of the software as well as the hardware development. In addition we give you a list of the needed hardware parts to replicate this project. 
 
+<!-- HARDWARE DEVELOPMENT -->
 ### Hardware Development
 
-
+<!-- SENSOR INTEGRATION -->
 #### Sensor Integration
 
 After the ordered parts arrived, we wired the matrix panel, its corresponding matrix bonnet and the raspberry pi together and ran simple examples to see if the matrix panel was capable of displaying moving shapes fast enough. 
@@ -89,8 +91,8 @@ We also used a USB microphone that was simply plugged into one of the raspberry 
 
 <img src="imgs/hardware_wiring2.png" alt="Hardware" width=400/>
 
-
-#### Acryllic case design
+<!-- ACRYLLIC CASE DESIGN -->
+#### Acryllic Case Design
 
 As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters on https://www.festi.info/boxes.py/. We used the Universal Box with parallel finger joint holes. The final box design can be seen in the following [file](./imgs/final_box_design.ai). After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. 
 
