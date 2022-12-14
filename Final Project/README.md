@@ -57,7 +57,7 @@ Rahul Jain, Yusef Iskandar
 <!-- DEMO -->
 ## Demo
 
-Add video!!!
+[![Final Project Functional Checkoff](https://img.youtube.com/vi/FJsH19XHq3g/0.jpg)](https://www.youtube.com/watch?v=FJsH19XHq3g)
 
 <!-- DESCRIPTION -->
 ## Description
@@ -94,7 +94,7 @@ We also used a USB microphone that was simply plugged into one of the raspberry 
 <!-- ACRYLLIC CASE DESIGN -->
 #### Acryllic Case Design
 
-As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters on https://www.festi.info/boxes.py/. We used the Universal Box with parallel finger joint holes. The final box design can be seen in the following [file](./imgs/final_box_design.ai). After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. 
+As a next step we designed the accryllic case for the matrix panel. We generated our design by adjusting pre-defined parameters using [Festi](https://www.festi.info/boxes.py/). We used the Universal Box with parallel finger joint holes. The final box design can be seen in the following [file](./imgs/final_box_design.ai). After generating an appropriate design, we used cardboard instead of acryllic for our initial prototype. 
 
 <img src="imgs/hardware_cardboard_casing.png" alt="Hardware" width=400/>
 
@@ -107,7 +107,7 @@ We found some issues with the design related to the number of finger joints per 
 
 #### Gyroscope Calibration
 
-At the beginning of our software development phase, we worked on the calibration of the gyroscope/accelerometer. The two important angles to use with our matrix panel are "pitch" and "roll". To calculate these angles, we used the equations found below, which are derived from https://ozzmaker.com/compass2/. 
+At the beginning of our software development phase, we worked on the calibration of the gyroscope/accelerometer. The two important angles to use with our matrix panel are "pitch" and "roll". To calculate these angles, we used the equations found below, which are derived from [here] (https://ozzmaker.com/compass2/). 
 
 <img width="1000" alt="Screenshot 2022-12-07 at 10 18 49 PM" src="https://user-images.githubusercontent.com/91849980/206347725-820da3c6-cc0e-41bb-83d9-54488ce084a0.png">
 
@@ -148,61 +148,61 @@ The unique feature of our Pacman game is that the speed of the game changes depe
 In the game we tried to get as close as possible to the real Pacman game. Each player has 3 lives and can earn points by eating food, where you can get 10 points for food and 50 points for power pellets. After eating a power pellet, the game switches to ghost mode, where Pacman can eat ghosts. For each ghost eaten, you get 200 points. The game has four enemies that start at four different corners of the board. Although there are four enemies, you have to distinguish between the scatter and chase modes. In scatter mode, the enemies do not actively chase Pacman, but focus on a specific point on the matrix panel and move in loops around that point. In this game, we have set these positions as the four corners of the maze, which means that the four enemies will run in loops around each corner of the maze when in chase mode. To make it harder for the player, we also have a chase mode. As mentioned earlier, each enemy starts in scatter mode, but after a certain amount of time the first enemy switches to chase mode, then the second, until in the end all enemies are in chase mode. In chase mode, the enemy is actively chasing Pacman's position. Looking for a suitable algorithm, we found an article that uses Breath First Search (BFS), which would be the best solution for this situation. The best next solution would be to optimize by minimum distance (also Manhattan distance). However, we were not able to successfully run the BFS algorithm, the code can be seen in our main file, we suspect that calculating the best next step when using BFS takes too much time. Therefore we decided to use the minimum distance algorithm, which does its job amazingly well.
 
 Helpful resources we used for the game logic:
-https://gameinternals.com/understanding-pac-man-ghost-behavior
-https://github.com/TechnoVisual/Pygame-Zero
-https://pygame-zero.readthedocs.io/en/stable/#
-https://github.com/szczys/matrixman
+[1](https://gameinternals.com/understanding-pac-man-ghost-behavior),
+[2](https://github.com/TechnoVisual/Pygame-Zero),
+[3](https://pygame-zero.readthedocs.io/en/stable/#),
+[4](https://github.com/szczys/matrixman)
 
 
 #### Speaker Integration 
 
-As a last step of the whole final project we integrated a speaker into the system to play common Pacman sound effects. We downloaded and used the intro music, the eating food, the eating power pellet, the eating ghost and the death sound effect from https://www.classicgaming.cc/classics/pac-man/sounds.
-In general, we had a lot of problems with using the microphone and speaker on the raspberry pi at the same time, which made it impossible to use the speaker we used in class. Therefore, we used a bluetooth speaker from JBL. Although we used a bluetooth speaker, it was not easy to make it work with libraries like VLC, Pygame, etc. Finally, with the help of the BlueAlsa library and the instructions at the following link, we managed to do it (https://introt.github.io/docs/raspberrypi/bluealsa.html). 
-
+As a last step of the whole final project we integrated a speaker into the system to play common Pacman sound effects. We downloaded and used the intro music, the eating food, the eating power pellet, the eating ghost and the death sound effect from [here](https://www.classicgaming.cc/classics/pac-man/sounds).
+In general, we had a lot of problems with using the microphone and speaker on the raspberry pi at the same time, which made it impossible to use the speaker we used in class. Therefore, we used a bluetooth speaker from JBL. Although we used a bluetooth speaker, it was not easy to make it work with libraries like VLC, Pygame, etc. Finally, with the help of the BlueAlsa library and the instructions of [this](https://introt.github.io/docs/raspberrypi/bluealsa.html) link, we managed to do it. 
 
 
 <!-- GETTING STARTED -->
 # Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy of the project, run the following simple steps.
 
 ## Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Our project uses the rpi-rgb-led-matrix panel library which can be viewed using [this](https://github.com/hzeller/rpi-rgb-led-matrix) link. The folder of this library is inside our project folder. 
 
 ## Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+The following steps show you how to run the project.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   $ git clone https://github.com/yuseflo/Interactive-Lab-Hub.git
    ```
-3. Install NPM packages
+2. Go into the correct directory
    ```sh
-   npm install
+   $ cd "Final Project"
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Install the project requirements
+   ```sh
+   $ pip install -r requirements.txt
    ```
-
-
+4. Run the project by using following command
+   ```sh
+   $ sudo python3 pacman.py --led-cols=64 --led-gpio-mapping=adafruit-hat --led-slowdown-gpio=4 --led-brightness=30 --led-no-drop-privs
+   ```
 
 
 <!-- USAGE EXAMPLES -->
 # Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In this section, we are going to show you a video where users tested our product. We also presented the matrix panel during Cornell Tech's Open Studio, where lots of people got the chance to try our product. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Open Studio Video
 
+[![IDD Final Project Matrix Gaming Console - Open Studio](https://img.youtube.com/vi/YBvebi-GN_Y/0.jpg)](https://www.youtube.com/watch?v=YBvebi-GN_Y)
+
+### General User Testing
+
+[![IDD Final Project Matrix Gaming Console - User Testing](https://img.youtube.com/vi/5i83VmwyNsk/0.jpg)](https://www.youtube.com/watch?v=5i83VmwyNsk)
 
 
 <!-- ROADMAP -->
@@ -223,8 +223,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 # License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
 
 
 <!-- CONTACT -->
