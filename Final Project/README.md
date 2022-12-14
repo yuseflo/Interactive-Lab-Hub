@@ -41,7 +41,6 @@ Rahul Jain, Yusef Iskandar
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -57,7 +56,13 @@ Rahul Jain, Yusef Iskandar
 <!-- DEMO -->
 ## Demo
 
+The first video demonstrates our matrix panel and the functionality of the Pacman game. The second video shows our product during Cornell Tech's Open Studio, where lots of people got the chance to try it. 
+
 [![Final Project Functional Checkoff](https://img.youtube.com/vi/FJsH19XHq3g/0.jpg)](https://www.youtube.com/watch?v=FJsH19XHq3g)
+
+
+[![IDD Final Project Matrix Gaming Console - Open Studio](https://img.youtube.com/vi/YBvebi-GN_Y/0.jpg)](https://www.youtube.com/watch?v=YBvebi-GN_Y)
+
 
 <!-- DESCRIPTION -->
 ## Description
@@ -107,7 +112,7 @@ We found some issues with the design related to the number of finger joints per 
 
 #### Gyroscope Calibration
 
-At the beginning of our software development phase, we worked on the calibration of the gyroscope/accelerometer. The two important angles to use with our matrix panel are "pitch" and "roll". To calculate these angles, we used the equations found below, which are derived from [here] (https://ozzmaker.com/compass2/). 
+At the beginning of our software development phase, we worked on the calibration of the gyroscope/accelerometer. The two important angles to use with our matrix panel are "pitch" and "roll". To calculate these angles, we used the equations found below, which are derived from [here](https://ozzmaker.com/compass2/). 
 
 <img width="1000" alt="Screenshot 2022-12-07 at 10 18 49 PM" src="https://user-images.githubusercontent.com/91849980/206347725-820da3c6-cc0e-41bb-83d9-54488ce084a0.png">
 
@@ -132,9 +137,9 @@ The next step was to create a maze based on the available pixel size of the matr
 
 <img src="imgs/software_dev_testing_maze_display.png" alt="Software" width=400/>
 
-Unfortunately, this was not the best approach, so we had to manually design a maze with 62x32 walls and continuously remove the walls to create a path for Pacman. This approach resulted in [2](pacman_board_2.txt). For the two boards described earlier, we assumed that Pacman gets food at every point he can step on. Another approach we took was to place food at every other pixel. We assumed that this would make the board easier to understand after viewing. However, we discarded this approach because it was too cluttered and made it even harder for the user to understand the game. 
+Unfortunately, this was not the best approach, so we had to manually design a maze with 62x32 walls and continuously remove the walls to create a path for Pacman. This approach resulted in [2](pacman_board_2.txt). For the two boards described earlier, we assumed that Pacman gets food at every point he can step on. [Another approach](pacman_board_3.txt) we took was to place food at every other pixel. We assumed that this would make the board easier to understand after viewing. However, we discarded this approach because it was too cluttered and made it even harder for the user to understand the game. 
 
-Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt).
+Maze Files [1](pacman_board_1.txt), [2](pacman_board_2.txt), [3](pacman_board_3.txt), [4](pacman_board_4.txt), [5](pacman_board_5.txt).
 
 
 #### Microphone Integration
@@ -159,6 +164,24 @@ Helpful resources we used for the game logic:
 As a last step of the whole final project we integrated a speaker into the system to play common Pacman sound effects. We downloaded and used the intro music, the eating food, the eating power pellet, the eating ghost and the death sound effect from [here](https://www.classicgaming.cc/classics/pac-man/sounds).
 In general, we had a lot of problems with using the microphone and speaker on the raspberry pi at the same time, which made it impossible to use the speaker we used in class. Therefore, we used a bluetooth speaker from JBL. Although we used a bluetooth speaker, it was not easy to make it work with libraries like VLC, Pygame, etc. Finally, with the help of the BlueAlsa library and the instructions of [this](https://introt.github.io/docs/raspberrypi/bluealsa.html) link, we managed to do it. 
 
+### Hardware Parts
+
+* Matrix Power supply 5V 4A - $15
+  * https://www.mouser.com/ProductDetail/485-1466 
+* Matrix Panel - $40
+  * https://www.mouser.com/ProductDetail/485-2278 
+* Matrix Bonnet - $15
+  * https://www.mouser.com/ProductDetail/485-3211 
+* Female DC Power Adapter - $2
+  * https://www.mouser.com/ProductDetail/485-368 
+* Gyroscope: MPU 6050 6 DoF - $13
+  * https://www.mouser.com/ProductDetail/485-3886
+* USB Microphone - $8
+  * https://www.amazon.com/SunFounder-Microphone-Raspberry-Recognition-Software/dp/B01KLRBHGM 
+* Raspberry Pi 3B+ - Have in the class kit
+* StemmaQT Cables - Have in the class kit
+* Raspberry Pi Power supply - Have in the class kit
+* JBL Go Speaker - Personal belonging
 
 <!-- GETTING STARTED -->
 # Getting Started
@@ -175,7 +198,7 @@ The following steps show you how to run the project.
 
 1. Clone the repo
    ```sh
-   $ git clone https://github.com/yuseflo/Interactive-Lab-Hub.git
+   $ git clone https://github.com/jainr3/Interactive-Lab-Hub.git
    ```
 2. Go into the correct directory
    ```sh
@@ -196,27 +219,9 @@ The following steps show you how to run the project.
 
 In this section, we are going to show you a video where users tested our product. We also presented the matrix panel during Cornell Tech's Open Studio, where lots of people got the chance to try our product. 
 
-### Open Studio Video
-
-[![IDD Final Project Matrix Gaming Console - Open Studio](https://img.youtube.com/vi/YBvebi-GN_Y/0.jpg)](https://www.youtube.com/watch?v=YBvebi-GN_Y)
-
 ### General User Testing
 
 [![IDD Final Project Matrix Gaming Console - User Testing](https://img.youtube.com/vi/5i83VmwyNsk/0.jpg)](https://www.youtube.com/watch?v=5i83VmwyNsk)
-
-
-<!-- ROADMAP -->
-# Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-
 
 
 <!-- LICENSE -->
@@ -232,7 +237,7 @@ Rahul Jain - rj299@cornell.edu
 
 Yusef Iskandar - yi78@cornell.edu
 
-Project Link: [Final Project](https://github.com/yuseflo/Interactive-Lab-Hub/edit/Fall2022/Final%20Project/)
+Project Link: [Final Project](https://github.com/jainr3/Interactive-Lab-Hub/edit/Fall2022/Final%20Project/)
 
 
 <!-- ACKNOWLEDGMENTS -->
