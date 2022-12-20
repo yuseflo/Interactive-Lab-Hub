@@ -2,6 +2,10 @@
 
 Rahul Jain, Yusef Iskandar
 
+DO NOT CONSIDER THE FOLLOWING CONTENT AND PLEASE FIND THE COMPLETE PROJECT HERE:
+
+https://github.com/jainr3/Interactive-Lab-Hub/tree/Fall2022/Final%20Project
+
 ---
 
 <!-- TABLE OF CONTENTS -->
